@@ -8,48 +8,101 @@
 
 nav{
     display: flex;
-    border:3px solid purple;
     height: 50px;
     background-color: black;
 }
 
 nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: white;
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:lighter;
+    height:100%;
+    width:120px;
 }
 
-nav a:hover{
-    background-color: white;
-    color: black;
-}
 
 .nav-list{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 3px solid red;
+    border-bottom:1px solid #00800060;
     width: 100%;
 }
 
 
 .nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
-    border:2px solid black;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid white;
 }
 
 
 .main-slider{
-    border:3px solid green;
     height:600px;
     background-image:url("Images/razer-blade16-homepage.webp");
     background-repeat: none;
     background-position: center;
     background-size: cover;
+    padding-top:50px;
 }
-
 
 
 
 .main-slider h1{
+    color: rgba(240, 240, 240, 0.959);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:600;
+    font-size: 55px;
+    text-align: center;
+}
+
+.main-slider span{
+    
+}
+
+.main-slider div a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+
+.main-slider div a:hover{
+    border-bottom:1px solid white;
+}
+
+
+
+span{
     color: white;
 }
+
+.green{
+    color: #008000;
+}
+
+
+
+.main-slider p{
+    color: rgb(209, 209, 209);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    text-align: center;
+    margin-top:8px;
+}
+
+
