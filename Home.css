@@ -5,11 +5,14 @@
 }
 
 
+body{
+    height: 200vh;
+}
 
 nav{
     display: flex;
     height: 50px;
-    background-color: black;
+    background-color:black;
 }
 
 nav a{
@@ -30,7 +33,7 @@ nav a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom:1px solid #00800060;
+    border-bottom:1px solid #0eaf0e;;
     width: 100%;
 }
 
@@ -50,18 +53,23 @@ nav a{
 }
 
 
-.main-slider{
+#main-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height:600px;
+    width: 100%;
     background-image:url("Images/razer-blade16-homepage.webp");
     background-repeat: none;
     background-position: center;
     background-size: cover;
     padding-top:50px;
+
 }
 
 
 
-.main-slider h1{
+#main-slider h1{
     color: rgba(240, 240, 240, 0.959);
     font-family: Arial, Helvetica, sans-serif;
     font-weight:600;
@@ -69,11 +77,21 @@ nav a{
     text-align: center;
 }
 
-.main-slider span{
+#main-slider span{
     
 }
 
-.main-slider div a{
+#main-slider .spanz{
+    width:20%;
+}
+
+#main-slider div{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+#main-slider .spanz a{
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -81,7 +99,7 @@ nav a{
 }
 
 
-.main-slider div a:hover{
+#main-slider .spanz a:hover{
     border-bottom:1px solid white;
 }
 
@@ -92,17 +110,40 @@ span{
 }
 
 .green{
-    color: #008000;
+    color: #0eaf0e;
+    margin-left:8px;
+    font-size: 20px;
 }
 
 
 
-.main-slider p{
-    color: rgb(209, 209, 209);
+#main-slider p{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 27px;
     text-align: center;
     margin-top:8px;
+    color: rgb(219, 219, 219);
 }
 
+.controls{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.controls button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.controls button:hover{
+    background-color: rgba(255, 255, 255, 0.164);
+}
+
+.controls button:active{
+    background-color: rgba(255, 255, 255, 0.397);
+}
 
