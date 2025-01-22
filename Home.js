@@ -20,35 +20,44 @@ let images = [
 ]
 
 
+window.addEventListener("DOMContentLoaded",()=>{
+    let randomIndex = Math.floor(Math.random()*images.length)
 
-
-let indexNumber =0
-
-
-
-rightBtn.addEventListener("click",(e)=>{
-    if(e.target.tagName==="IMG"){
+    mainSlider.style.backgroundImage = `url(${images[randomIndex].name})`;
+    rightBtn.addEventListener("click",(e)=>{
+        if(e.target.tagName==="IMG"){
     
-        if(indexNumber>images.length-1){
-            indexNumber= 0
-            mainSlider.style.backgroundImage = `url(${images[indexNumber].name})`;
-        }else{
-                mainSlider.style.backgroundImage = `url(${images[++indexNumber].name})`;
-        
+            randomIndex++
+            console.log(randomIndex)
+            if(randomIndex>images.length-1){
+                randomIndex=0
+            }
+             mainSlider.style.backgroundImage = `url(${images[randomIndex].name})`;
+               
+
+           
         }
-    }
-});
+    });
+     
+    
+    
+    leftBtn.addEventListener("click",(e)=>{
+        if(e.target.tagName==="IMG"){
+
+            --randomIndex
+            if(randomIndex<0){
+                randomIndex = images.length-1
+            }
+             mainSlider.style.backgroundImage = `url(${images[randomIndex].name})`;
+            
+               
 
 
-
-leftBtn.addEventListener("click",(e)=>{
-    if(e.target.tagName==="IMG"){
+    }});
+    
     
 
 
-
-      //mainSlider.style.backgroundImage = `url(${images[indexNumber].name})`;
-    }
 });
 
 
