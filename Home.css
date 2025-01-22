@@ -6,7 +6,7 @@
 
 
 body{
-    height: 200vh;
+
 }
 
 nav{
@@ -64,7 +64,6 @@ nav a{
     background-position: center;
     background-size: cover;
     padding-top:50px;
-
 }
 
 
@@ -147,3 +146,12 @@ span{
     background-color: rgba(255, 255, 255, 0.397);
 }
 
+
+
+footer{
+    background-color:rgb(46, 46, 46) ;
+    height:200px;
+    min-height:150px;
+    width: 100%;
+    border-top:1px solid #0eaf0e;
+}
