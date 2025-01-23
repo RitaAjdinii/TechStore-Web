@@ -1,0 +1,84 @@
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("images/loginBg.jpg");
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    background-color:black;
+    justify-content: space-around;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:lighter;
+    height:100%;
+    width:120px;
+}
+
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #0eaf0e;;
+    width: 100%;
+    padding:0 100px;
+}
+
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid white;
+}
+
+
+.container{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+
+.login-container{
+    background-color: black;
+    height: 580px;
+    width:450px;
+    border:1px solid rgb(65, 65, 65);
+}
+
+h3{
+    height: 100px;
+    font-family: "Space Grotesk", serif;
+    font-size: 27px;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:20px;
+}
