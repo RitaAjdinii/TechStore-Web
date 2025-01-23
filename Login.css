@@ -35,7 +35,7 @@ nav a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom:1px solid #0eaf0e;;
+    border-bottom:1px solid #0eaf0e;
     width: 100%;
     padding:0 100px;
 }
@@ -68,7 +68,7 @@ nav a{
     background-color: black;
     height: 580px;
     width:450px;
-    border:1px solid rgb(65, 65, 65);
+    border:1px solid rgb(51, 51, 51);
 }
 
 h3{
@@ -81,4 +81,30 @@ h3{
     justify-content: flex-start;
     align-items: center;
     padding-left:20px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input{
+    height:45px;
+    width:91%;
+    background:transparent;
+    border:1px solid grey;
+    color:grey;
+    font-size: 15px;
+    padding-left:10px;
+}
+
+form input:first-of-type{
+    margin-bottom:20px;
+}
+
+form input:focus{
+    outline:1px solid #0eaf0e;;
+    border:none;
 }
