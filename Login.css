@@ -96,7 +96,7 @@ form input{
     background:transparent;
     border:1px solid grey;
     color:grey;
-    font-size: 15px;
+    font-size: 13px;
     padding-left:10px;
 }
 
@@ -105,6 +105,75 @@ form input:first-of-type{
 }
 
 form input:focus{
-    outline:1px solid #0eaf0e;;
+    outline:1px solid #0eaf0e;
     border:none;
 }
+
+#forgor{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-top:18px;
+    font-size:15px;
+}
+
+#forgor a{
+    text-decoration:none;
+    color: grey;
+    font-family: sans-serif;
+    text-align: end;
+}
+
+#forgor a:hover{
+    color: #0eaf0e;
+}
+
+#acc,#create-id{
+    width: 90%;
+    text-align: center;
+    margin-top:18px;
+    
+}
+
+
+
+#acc a{
+    text-decoration:none;
+    color: rgb(203, 203, 203);
+    font-family: sans-serif;
+    text-align: end;
+    font-size:15px;
+}
+
+#create-id a{
+    text-decoration:none;
+    color: white;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+#create-id a:hover{
+    color: #0eaf0e;
+}
+
+
+#login-btn{
+    height:45px;
+    width:91%;
+    background-color: #1166119b;
+    color:rgba(0, 0, 0, 0.777);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:18px;
+    font-family: "Space Grotesk", serif;
+    border-radius: 3px;
+    border: none;
+}
+
+.green{
+    color: #0eaf0e;
+    margin-left:8px;
+    font-size: 20px;
+}
+
