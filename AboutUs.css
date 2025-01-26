@@ -1,0 +1,66 @@
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: black;
+    height: 110vh;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    background-color:black;
+    justify-content: space-around;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:lighter;
+    height:100%;
+    width:120px;
+}
+
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #0eaf0e;
+    width: 100%;
+    padding:0 100px;
+}
+
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid white;
+}
+
+
+h1{
+    color: #15d915;
+    font-weight: bold;
+    text-align: center;
+    font-family:sans-serif;
+    font-style: normal;
+    font-size: 80px;
+}
