@@ -1,0 +1,208 @@
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-image: url("images/loginBg.jpg");
+    background-size: cover;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    background-color:black;
+    justify-content: space-around;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:lighter;
+    height:100%;
+    width:120px;
+}
+
+
+.nav-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #0eaf0e;
+    width: 100%;
+    padding:0 100px;
+}
+
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid white;
+}
+
+
+.container{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+
+.login-container{
+    background-color: black;
+    height: auto;
+    width:450px;
+    border:1px solid rgb(51, 51, 51);
+}
+
+h3{
+    height: 100px;
+    font-family: "Space Grotesk", serif;
+    font-size: 27px;
+    color: white;
+    font-weight: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:20px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input{
+    height:45px;
+    width:91%;
+    background:transparent;
+    border:1px solid grey;
+    color:grey;
+    font-size: 13px;
+    padding-left:10px;
+}
+
+form input:first-of-type{
+    margin-bottom:20px;
+}
+
+form input:focus{
+    outline:1px solid #0eaf0e;
+    border:none;
+}
+
+#forgor{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-top:18px;
+    font-size:15px;
+}
+
+#forgor a{
+    text-decoration:none;
+    color: grey;
+    font-family: sans-serif;
+    text-align: end;
+}
+
+#forgor a:hover{
+    color: #0eaf0e;
+}
+
+#acc,#create-id{
+    width: 90%;
+    text-align: center;
+    margin-top:18px;
+    
+}
+
+
+
+#acc a{
+    text-decoration:none;
+    color: rgb(203, 203, 203);
+    font-family: sans-serif;
+    text-align: end;
+    font-size:15px;
+}
+
+#create-id a{
+    text-decoration:none;
+    color: white;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+}
+
+#create-id a:hover{
+    color: #0eaf0e;
+}
+
+
+#login-btn{
+    height:45px;
+    width:91%;
+    background-color: #1166119b;
+    color:rgba(0, 0, 0, 0.777);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:18px;
+    font-family: "Space Grotesk", serif;
+    border-radius: 3px;
+    border: none;
+}
+
+.green{
+    color: #0eaf0e;
+    margin-left:8px;
+    font-size: 20px;
+}
+
+
+
+#tekk-id{
+    color: white;
+    font-family: "Space Grotesk", serif;
+}
+
+
+.input-container input {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+    width: 100%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
