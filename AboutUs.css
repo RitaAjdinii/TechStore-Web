@@ -54,12 +54,14 @@ nav a{
 
 
 .content-container{
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 
-h1{
+h1,h2{
     color: #15d915;
     font-weight: bold;
     text-align: center;
@@ -67,6 +69,12 @@ h1{
     font-style: normal;
     font-size: 80px;
 }
+
+h2{
+    font-size: 60px;
+}
+
+
 
 h3{
     color: white;
@@ -95,11 +103,19 @@ h3{
     align-items: center;
     height: 500px; /* Fixed height for the container */
     width: 100vw; /* Ensures it spans the full width of the viewport */
-    overflow: hidden; /* Prevents the image from overflowing the container */
 }
 
 
 .about-image img {
     height: 100%; /* Image height matches the container height */
     width: auto; /* Width is proportional to the height */
+}
+
+.long-text1{
+    margin-bottom:30px;
+}
+
+.long-text-container{
+    width:70%;
+    height: auto;
 }
