@@ -71,7 +71,8 @@ h1,h2{
 }
 
 h2{
-    font-size: 60px;
+    text-align: start;
+    font-size: 63px;
 }
 
 
@@ -118,4 +119,21 @@ h3{
 .long-text-container{
     width:70%;
     height: auto;
+}
+
+
+
+.history-container{
+    height: auto;
+    width: 100%;
+    outline: 3px solid white;
+    background-color: rgb(53, 49, 49);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+
+.history-container li{
+    color: grey;
 }
