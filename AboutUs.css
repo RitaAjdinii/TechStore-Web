@@ -6,15 +6,13 @@
 
 
 body{
-    background-color: black;
-    height: 110vh;
+background-color: black;
 }
 
 nav{
     display: flex;
     height: 80px;
     background-color:black;
-    justify-content: space-around;
 }
 
 nav a{
@@ -33,11 +31,10 @@ nav a{
 
 .nav-list{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    border-bottom:1px solid #0eaf0e;
+    border-bottom:1px solid #0eaf0e;;
     width: 100%;
-    padding:0 100px;
 }
 
 
@@ -56,6 +53,12 @@ nav a{
 }
 
 
+.content-container{
+    display: flex;
+    flex-direction: column;
+}
+
+
 h1{
     color: #15d915;
     font-weight: bold;
@@ -63,4 +66,40 @@ h1{
     font-family:sans-serif;
     font-style: normal;
     font-size: 80px;
+}
+
+h3{
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+
+
+.about-undertext,.long-text1{
+    color: grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: light;
+    font-size: 18px;
+}
+
+
+
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px; /* Fixed height for the container */
+    width: 100vw; /* Ensures it spans the full width of the viewport */
+    overflow: hidden; /* Prevents the image from overflowing the container */
+}
+
+
+.about-image img {
+    height: 100%; /* Image height matches the container height */
+    width: auto; /* Width is proportional to the height */
 }
