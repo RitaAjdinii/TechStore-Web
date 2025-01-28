@@ -1,0 +1,61 @@
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+background-color: grey;
+}
+
+nav{
+    display: flex;
+    height: 80px;
+    background-color:black;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Space Grotesk", serif;
+    font-size: 15px;
+    font-weight:lighter;
+    height:100%;
+    width:120px;
+}
+
+
+.nav-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom:1px solid #0eaf0e;;
+    width: 100%;
+}
+
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid white;
+}
+
+.container{
+    outline:3px solid red;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
