@@ -126,7 +126,6 @@ h3{
 .history-container{
     height: auto;
     width: 100%;
-    outline: 3px solid white;
     background-color: rgb(53, 49, 49);
     display: flex;
     justify-content: flex-start;
@@ -136,4 +135,37 @@ h3{
 
 .history-container li{
     color: grey;
+}
+
+
+.history-list li{
+    list-style-type: circle;
+}
+
+
+.accolades{
+   
+}
+
+.accolades-container{
+}
+
+.ac-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.ac-item{
+    max-width:30%;
+}
+
+
+.ac-description{
+    color: white;
+}
+
+
+.ac-item h4{
+    color: white;
 }
