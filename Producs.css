@@ -53,9 +53,21 @@ nav a{
 }
 
 .container{
-    outline:3px solid red;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
+
+article{
+    border:3px solid black;
+    display: flex;
+    flex-direction: column;
+    width:400px;
+    margin:10px;
+}
+
+article img{
+    height:300px;
+
+}
