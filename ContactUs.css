@@ -6,7 +6,7 @@
 
 
 body{
-
+background-color: rgba(0, 0, 0, 0.957);
 }
 
 nav{
@@ -33,7 +33,7 @@ nav a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom:1px solid #0eaf0e;;
+    border-bottom:1px solid #0eaf0e26;
     width: 100%;
 }
 
@@ -55,6 +55,7 @@ nav a{
 
 h1{
     font-family: 'Times New Roman', Times, serif;
+   
 }
 
 .form-group{
@@ -70,16 +71,27 @@ h1{
 }
 
 .form-group button{
-    height: 30px;
     width:100%;
+    background-color: transparent;
+    border:1px solid #0eaf0e32;
+    color: white;
+    padding: 10px;
+    
 }
 
+.form-group button:hover{
+     background-color: rgba(35, 35, 35, 0.753);
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+}
 
 .form-group input{
     height: 40px;
     width:50%;
     border:none;
     margin-right:10%;
+    color: grey;
 }
 
 .item{
@@ -93,6 +105,7 @@ h1{
     display: flex;
     justify-content: center;
     margin-top:50px;
+    color: white;
 
 }
 
@@ -112,7 +125,7 @@ textarea{
 
 
 h1{
-    color: #15d915;
+    color: #0eaf0e9c;
     font-weight: bold;
     text-align: center;
     font-family:sans-serif;
@@ -121,7 +134,6 @@ h1{
 }
 
 .title{
-    background-color: rgb(44, 44, 44);
     height:100px;
     display: flex;
     justify-content: center;
