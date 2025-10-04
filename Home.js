@@ -4,13 +4,13 @@ const mainSlider = document.querySelector("#main-slider");
 
 let images = [
     {
-        name:"images/gamingLaptop1.jpeg"
+        name:"images/RazerNexus.webp"
     },
     {
         name:"images/gamingLaptop2.jpeg"
     },
     {
-        name:"images/headphones1.jpg"
+        name:"images/RazerMainSlider.webp"
     },{
         name:"images/razer-blade16-homepage.webp"
     },{
