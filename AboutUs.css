@@ -7,6 +7,8 @@
 
 body{
 background-color: black;
+ font-family: Arial, Helvetica, sans-serif;
+    word-break: break-word;
 }
 
 nav{
@@ -54,11 +56,15 @@ nav a{
 
 
 .content-container{
-    width: 100%;
+    margin-top:100px;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items:center;
+    
 }
+
 
 
 h1,h2{
@@ -102,8 +108,10 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px; /* Fixed height for the container */
-    width: 100vw; /* Ensures it spans the full width of the viewport */
+    flex-grow: 3;
+    min-height:50px;
+    min-width:100px;
+
 }
 
 
@@ -119,6 +127,7 @@ h3{
 .long-text-container{
     width:70%;
     height: auto;
+    
 }
 
 
@@ -126,10 +135,13 @@ h3{
 .history-container{
     height: auto;
     width: 100%;
-    background-color: rgb(53, 49, 49);
+    background-color: rgba(53, 49, 49, 0.421);
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    padding:10%;
+    margin:50px;
+   
 }
 
 
@@ -148,24 +160,84 @@ h3{
 }
 
 .accolades-container{
+    gap:20px;
 }
 
 .ac-section{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap:30px;
 }
 
 .ac-item{
-    max-width:30%;
+    max-width:500px;
+    min-width:20%;
 }
 
 
 .ac-description{
-    color: white;
+    color: grey;
+    font-size:20px;
+    font-weight: lighter;
 }
 
 
 .ac-item h4{
     color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+    .nav-list{
+        display: none;
+    }
+
+    .hamburger .line{
+        height:1px;
+        width:30px;
+        background-color: rgb(253, 253, 253);
+    
+    }
+    nav{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding:0 5%;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+
+
+}
+
+
+.hamburger{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    height:100px;
+    width:auto;
+    gap:8px;
+    cursor: pointer;
+}
+
+
+.display{
+    display:none;
+}
+
+
+footer{
+    margin-top:50px;
+    height:20%;
+    width: auto;
+    background-color: black;
+
 }

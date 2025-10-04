@@ -33,7 +33,7 @@ nav a{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom:1px solid #0eaf0e26;
+    border-bottom:1px solid #0eaf0e;;
     width: 100%;
 }
 
@@ -54,6 +54,7 @@ nav a{
 
 
 h1{
+   
     font-family: 'Times New Roman', Times, serif;
    
 }
@@ -134,9 +135,53 @@ h1{
 }
 
 .title{
+     margin-top:50px;
     height:100px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
+@media screen and (max-width: 1200px) {
+    .nav-list{
+        display: none;
+    }
+
+    .hamburger .line{
+        height:1px;
+        width:30px;
+        background-color: rgb(253, 253, 253);
+    
+    }
+    nav{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding:0 5%;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+
+
+}
+
+
+.hamburger{
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    height:100px;
+    width:auto;
+    gap:8px;
+    cursor: pointer;
+}
+
+
+.display{
+    display:none;
+}
