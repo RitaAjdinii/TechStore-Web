@@ -23,8 +23,8 @@
                 <h3>CREATE RAZER ID ACCOUNT</h3>
                 <p id="tekk-id">Tekk ID is a unified account for all TEKK devices</p>    
             </div>
-            <form>
-                <input type="text"name="fname" placeholder="TECH ID (your name)">
+            <form action="includes/signup.inc.php" method="post">
+                <input type="text"name="username" placeholder="TECH ID (your name)">
                 <select name="location" id="location">
                     <option value="">Location</option>
                     <option value="Afghanistan">Afghanistan</option>
@@ -44,10 +44,10 @@
                     <option value="Austria">Austria</option>
                 </select>
 
-                <input class="input-container" type="date">
-                <input type="text"name="fname" placeholder="EMAIL ADDRESS">
-                <input type="text"name="fname" placeholder="PASSWORD">
-                <button id="login-btn">LOG IN</button>
+                <input class="input-container" type="date" name="birthdate">
+                <input type="text" name="email" placeholder="EMAIL ADDRESS">
+                <input type="password" name="password" placeholder="PASSWORD">
+                <button type="submit" name="submit" id="login-btn">LOG IN</button>
                 <p id="acc"><a href="Login.html">Already have an account?</a></p>
                 <p id="create-id"><a href="">Log In<span class="green">></span></a></p>
             </form>
