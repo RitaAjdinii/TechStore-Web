@@ -13,8 +13,9 @@ if(isset($_POST["submit"])){
       include "../classes/signup.class.php";
       include "../classes/signup-contr.class.php";
 
+      $signup = new SignupContr($name,$location,$birthdate,$email,$password);
 
-      
-
+      $signup->signupUser();
+       header("location:../index.php?error=none");
 
 }

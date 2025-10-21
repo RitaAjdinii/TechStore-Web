@@ -10,12 +10,15 @@ class Dbh{
             $username  ="root";
             $password = "";
 
-            $dbh=new PDO("mysql:host=localhost;dbname=",$username,$password);
+            $dbh= new PDO("mysql:host=localhost;dbname=web-tech-store",$username,$password);
             return $dbh;
         }catch(PDOException $e){
-             print "Connection failed: " . $e->getMessage()."<br/>";
+             print "Connection failed: " . $e->getMessage()."</br>";
               die();
         }
 
     }
+
+
+   
 }

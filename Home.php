@@ -1,5 +1,7 @@
 
-
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +24,12 @@
          </div>
         <ul class="nav-list">
             <li class="nav-item"><a href="/Logo"><img src="Images/logo.svg"  class="logo"></a></li>
-            <li class="nav-item"><a  href="Home.html">Home</a></li>
-            <li class="nav-item"><a href="Producs.html">Products</a></li>
-            <li class="nav-item"><a href="ContactUs.html">Contact Us</a></li>
-            <li class="nav-item"><a href="AboutUs.html">About Us</a></li>
+            <li class="nav-item"><a  href="Home.php">Home</a></li>
+            <li class="nav-item"><a href="Producs.php">Products</a></li>
+            <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
+            <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
             <li class="nav-item"><a href="Cart"><img src="Images/cart.svg" alt=""></a></li>
-            <li class="nav-item"><a href="Signup.html">Sign up</a></li>
+            <li class="nav-item"><a href="Signup.php">Sign up</a></li>
         </ul>
     </nav>
     <div id="main-slider">

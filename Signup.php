@@ -48,8 +48,8 @@
                 <input type="text" name="email" placeholder="EMAIL ADDRESS">
                 <input type="password" name="password" placeholder="PASSWORD">
                 <button type="submit" name="submit" id="login-btn">LOG IN</button>
-                <p id="acc"><a href="Login.html">Already have an account?</a></p>
-                <p id="create-id"><a href="">Log In<span class="green">></span></a></p>
+                <p id="acc"><a href="Login.php">Already have an account?</a></p>
+                <p id="create-id"><a href="Login.php">Log In<span class="green">></span></a></p>
             </form>
         </div>
     </div>

@@ -6,8 +6,9 @@
 
 
 body{
-    background-image: url("images/loginBg.jpg");
+    background-color: black;
     background-size: cover;
+    height:3000vh;
 }
 
 nav{
@@ -133,6 +134,25 @@ form input:focus{
     text-align: center;
     margin-top:18px;
     
+}
+
+#location{
+    background-color: transparent;
+    height:45px;
+    width:91%;
+    background:transparent;
+    border:1px solid grey;
+    color:grey;
+    font-size: 13px;
+    padding-left:10px;
+}
+
+#location option{
+    background-color:rgb(46, 46, 46);
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: "Space Grotesk", serif;
 }
 
 
