@@ -1,0 +1,62 @@
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav{
+    background-color:rgb(219, 219, 219);
+    color: white;
+}
+.hamburger{
+    height:20px;
+    width:20px;
+    cursor: pointer;
+    margin-top:450px;
+}
+
+.line{
+    background-color: black;
+    width:20px;
+    height:5px;
+    margin-bottom:2px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height:50px;
+    align-items: center;
+    padding:0 20px 0 0;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.profile{
+    cursor: pointer;
+}
+
+
+.nav-list{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    padding:50px 0 0 0;
+    width:15%;
+    height:1000px;
+    background-color:grey;
+}
+
+.on{
+    display: block;
+}
+
+.nav-components{
+    display: block;
+}

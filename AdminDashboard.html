@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-Dashboard</title>
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+     <nav>
+        <ul class="nav-list">
+             <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+        </div>
+        <ul class="nav-components">
+            <li>Test</li>
+            <li>Test</li>
+            <li>Test</li>
+            <li>Test</li>
+        </ul>
+        </ul>
+        <div class="profile">
+            <h1>Profile</h1>
+        </div>
+     </nav>
+
+     <script>
+        const hamburger = document.querySelector(".hamburger");
+        const nav_list = document.querySelector(".nav-list");
+        const nav_components =document.querySelector("nav-components");
+        let isOpen = false;
+        
+        hamburger.addEventListener("click",()=>{
+            isOpen = !isOpen;
+            if(isOpen == true){
+                
+                nav_list.style.width = "20%";
+                nav_list.style.height = "1200px";
+                nav_list.style.backgroundColor = "rgba(61, 51, 51, 0.212)";
+            }else{
+                
+                nav_list.style.width = "0px";
+                nav_list.style.height = "0px";
+                nav_list.style.backgroundColor = "none";
+            }
+            
+            
+        });
+     </script>
+</body>
+</html>

@@ -70,11 +70,6 @@ session_start();
                         <option value="Australia">Australia</option>
                         <option value="Austria">Austria</option>
                     </select>
-                    
-                    
-                        
-                    
-
                     <input class="input-container" type="date" name="birthdate">
                     <input type="text" name="email" placeholder="EMAIL ADDRESS">
                     <input type="password" name="password" placeholder="PASSWORD">
