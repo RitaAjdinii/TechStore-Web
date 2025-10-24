@@ -65,13 +65,17 @@ nav a{
     margin-top:30px;
 }
 
-.login-container{
+.login-container,.signup-container{
     background-color: black;
     height: 430px;
     width:450px;
     border:1px solid rgb(51, 51, 51);
 }
 
+
+.signup-container{
+    height:600px;
+}
 h3{
     height: 100px;
     font-family: "Space Grotesk", serif;
@@ -178,6 +182,7 @@ form input:focus{
 }
 
 
+
 #login-btn{
     height:45px;
     width:91%;
@@ -197,3 +202,38 @@ form input:focus{
     font-size: 20px;
 }
 
+
+
+.off{
+    display: none;
+}
+
+
+#acc:hover{
+    color: rgb(0, 255, 0);
+    cursor: pointer;
+}
+
+
+
+#admin{
+    color: rgb(203, 203, 203);
+    width: 500px;
+    font-size:15px;
+    margin-left:100px;
+    margin-top:50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top:100px;
+    
+}
+
+#admin-check{
+    font-size:10px;
+    height:15px;
+    width:50px;
+    margin-right:90px;
+    margin-top:20px;
+    cursor: pointer;
+    background-color: transparent;
+}

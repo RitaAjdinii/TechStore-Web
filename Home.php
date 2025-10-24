@@ -29,7 +29,7 @@ session_start()
             <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
             <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
             <li class="nav-item"><a href="Cart"><img src="Images/cart.svg" alt=""></a></li>
-            <li class="nav-item"><a href="Signup.php">Sign up</a></li>
+            <li class="nav-item"><a href="Login.php">Sign up</a></li>
         </ul>
     </nav>
     <div id="main-slider">
