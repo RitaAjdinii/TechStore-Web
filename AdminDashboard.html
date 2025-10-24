@@ -9,17 +9,18 @@
 <body>
      <nav>
         <ul class="nav-list">
-             <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-        </div>
-        <ul class="nav-components">
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
-            <li>Test</li>
-        </ul>
+             <div class="burger-container">
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+             </div>
+             <ul class="nav-content-items">
+                <li>User info</li>
+                <li>Site updates</li>
+                <li>Site settings</li>
+             </ul>
         </ul>
         <div class="profile">
             <h1>Profile</h1>
@@ -30,6 +31,7 @@
         const hamburger = document.querySelector(".hamburger");
         const nav_list = document.querySelector(".nav-list");
         const nav_components =document.querySelector("nav-components");
+          const burger_container =document.querySelector("burger-container");
         let isOpen = false;
         
         hamburger.addEventListener("click",()=>{
@@ -39,11 +41,13 @@
                 nav_list.style.width = "20%";
                 nav_list.style.height = "1200px";
                 nav_list.style.backgroundColor = "rgba(61, 51, 51, 0.212)";
+                
             }else{
                 
                 nav_list.style.width = "0px";
                 nav_list.style.height = "0px";
                 nav_list.style.backgroundColor = "none";
+                
             }
             
             

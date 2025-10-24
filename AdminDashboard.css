@@ -13,7 +13,7 @@ nav{
     height:20px;
     width:20px;
     cursor: pointer;
-    margin-top:450px;
+    position:absolute;
 }
 
 .line{
@@ -47,16 +47,19 @@ nav{
     flex-direction:column;
     justify-content: space-between;
     align-items: center;
-    padding:50px 0 0 0;
-    width:15%;
-    height:1000px;
-    background-color:grey;
+    padding:0 30px;
+    width:20%;
+    height: 1200px;
+    background-color:rgba(61, 51, 51, 0.212);
 }
 
-.on{
-    display: block;
-}
 
-.nav-components{
-    display: block;
+.burger-container{
+    height:50px;
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:100%;
+    margin-top:580px;
 }
