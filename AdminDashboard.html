@@ -9,49 +9,44 @@
 <body>
      <nav>
         <ul class="nav-list">
-             <div class="burger-container">
-                    <div class="hamburger">
-                        <div class="line"></div>
-                        <div class="line"></div>
-                        <div class="line"></div>
-                    </div>
-             </div>
-             <ul class="nav-content-items">
-                <li>User info</li>
-                <li>Site updates</li>
-                <li>Site settings</li>
-             </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </ul>
-        <div class="profile">
-            <h1>Profile</h1>
-        </div>
-     </nav>
+        <ul class="nav-content">
+            <li>Users Info</li>
+            <li>Admin profile</li>
+            <li>Home Page edit</li>
+            <li>Contact Us edit</li>
+            <li>Products Edit</li>
+            <li>About Us Edit</li>
+            <li>Login Edit</li>
+            <li>Signup Edit</li>
+            <li>Add Pages++</li>
+        </ul>
+
+</nav>
 
      <script>
+
         const hamburger = document.querySelector(".hamburger");
-        const nav_list = document.querySelector(".nav-list");
-        const nav_components =document.querySelector("nav-components");
-          const burger_container =document.querySelector("burger-container");
+        const navContent = document.querySelector(".nav-content");
         let isOpen = false;
-        
+
         hamburger.addEventListener("click",()=>{
             isOpen = !isOpen;
-            if(isOpen == true){
-                
-                nav_list.style.width = "20%";
-                nav_list.style.height = "1200px";
-                nav_list.style.backgroundColor = "rgba(61, 51, 51, 0.212)";
-                
-            }else{
-                
-                nav_list.style.width = "0px";
-                nav_list.style.height = "0px";
-                nav_list.style.backgroundColor = "none";
-                
-            }
-            
-            
+             hamburger.classList.toggle("toggle-hamburger");
+             if(isOpen == true){
+                navContent.classList.add("toggle-sidebar");
+             }else{
+                navContent.classList.remove("toggle-sidebar");
+             }
+           
         });
+
+       
      </script>
 </body>
 </html>
