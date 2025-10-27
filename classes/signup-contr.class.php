@@ -7,16 +7,18 @@ class SignupContr extends Signup{
     private $birthdate;
     private $email;
     private $password;
+    private $isAdmin;
    
 
 
 
-    public function __construct($username,$location,$birthdate,$email,$password){
+    public function __construct($username,$location,$birthdate,$email,$password,$isAdmin){
         $this->username=$username;
         $this->location = $location;
         $this->birthdate = $birthdate;
         $this->email=$email;
-        $this->password=$password;              
+        $this->password=$password;        
+        $this->isAdmin = $isAdmin;      
     }
     
 
@@ -46,7 +48,7 @@ class SignupContr extends Signup{
 
 
 
-        $this->setUser($this->username,$this->location,$this->birthdate,$this->email,$this->password);
+        $this->setUser($this->username,$this->location,$this->birthdate,$this->email,$this->password,$this->isAdmin);
     }
 
 

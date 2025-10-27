@@ -75,7 +75,7 @@ session_start();
                     <input type="password" name="password" placeholder="PASSWORD">
                     <div class="isadmin">
                         <label for="" id="admin">Is Administrator</label>
-                    <input type="checkbox" id="admin-check">
+                    <input type="checkbox" id="admin-check" name="isAdmin">
                     </div>
                     
                     <button type="submit" name="submit" id="login-btn">Sign in</button>
