@@ -11,9 +11,19 @@ if(isset($_POST["submit"])){
 
 
   $login = new loginContr($email,$password);
+  session_start();
   $login->loginUser();
+  if($_SESSION["userAdmin"]==1){
 
-  header("location:../Home.php");
+  header("location:../AdminDashboard.php");
+
+  }else{
+    header("location:../Home.php");
+  }
+ 
+ // $login->loginUser();
+
+  
 
 
 }

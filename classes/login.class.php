@@ -4,7 +4,7 @@ class Login extends Dbh{
 
     protected function getUser($email,$password){
 
-        $stmt = $this->connect()->prepare('SELECT user_password FROM user WHERE user_email=? OR user_username=?;');
+        $stmt = $this->connect()->prepare('SELECT user_password FROM user WHERE user_email=? OR user_name=?;');
          // $stmt = $this->connect()->prepare('SELECT users_pwd FROM users where users_uid=? OR users_email=?;');
 
         if(!$stmt->execute(array($email,$email))){
@@ -30,7 +30,7 @@ class Login extends Dbh{
             exit();
         }
         else{
-            $stmt = $this->connect()->prepare('SELECT user_password,user_email,user_id FROM user WHERE (user_email=? OR user_username = ?)AND user_password=?;');
+            $stmt = $this->connect()->prepare('SELECT user_password,user_email,user_id,user_isAdmin FROM user WHERE (user_email=? OR user_name = ?)AND user_password=?;');
 
             if(!$stmt->execute(array($email,$email,$passwordHashed[0]["user_password"]))){
                 $stmt =null;
@@ -42,22 +42,29 @@ class Login extends Dbh{
 
             if($stmt->rowCount()==0){
                 $stmt = null;
-                header("location: ../Login.php?error=DionMaIqARTI");
+                header("location: ../Login.php?error=stmtFailed");
                 exit();
-            }//qekjo garant osht duplicate
+            }
 
             $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
-          
+            
+
             session_start();
+
             $_SESSION["userid"] = $user[0]["user_id"];
             $_SESSION["useremail"] = $user[0]["user_email"];
+            $_SESSION["userAdmin"] = $user[0]["user_isAdmin"];
+
         }
+        
  
         $stmt= null;
 
-       
-
     }
+
+   
+
+    
 
 
 

@@ -4,6 +4,7 @@ class loginContr extends Login{
 
     private $email;
     private $password;
+ 
 
     public function __construct($email,$password){
         $this->email = $email;
@@ -20,6 +21,11 @@ class loginContr extends Login{
 
         $this->getUser($this->email,$this->password);
     }
+
+    
+
+  
+
 
     public function emptyInput(){
         $result;
