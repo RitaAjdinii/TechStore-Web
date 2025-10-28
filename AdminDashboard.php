@@ -25,6 +25,7 @@
             <li>Login Edit</li>
             <li>Signup Edit</li>
             <li>Add Pages++</li>
+            <form action="includes/logout.inc.php" method="POST"><li><button type=submit>Logout</button></li></form>
         </ul>
 
 </nav>

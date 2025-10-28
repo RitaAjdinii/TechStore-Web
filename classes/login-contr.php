@@ -39,13 +39,7 @@ class loginContr extends Login{
         return $result;
     }
 
-
-    public function test1(){
-        echo "Testing";
-    }
-
-    
-
+  
 
 
 }
