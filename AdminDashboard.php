@@ -17,7 +17,7 @@
         </ul>
         <ul class="nav-content">
             <li>Users Info</li>
-            <li>Admin profile</li>
+            <li>Admin profile</li> 
             <li>Home Page edit</li>
             <li>Contact Us edit</li>
             <li>Products Edit</li>

@@ -78,6 +78,8 @@ class SignupContr extends Signup{
     }
 
 
+
+
     public function invalidEmail(){
         $result;
 
@@ -102,6 +104,9 @@ class SignupContr extends Signup{
 
         return $result;
     }
+
+    
+
 
     //username taken handler check?? to see if your username was taken by another user.\
 
