@@ -30,6 +30,92 @@
 
 </nav>
 
+<main class="main-container">
+    <h1>List of Users added</h1>
+    <table class="table">
+        <thead >
+            <tr>
+                <th>ID:</th>
+                <th>Username:</th>
+                <th>Password:</th>
+                <th>Email:</th>
+                <th>Location:</th>
+                <th>Birthdate:</th>
+                <th>Is Admin:</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+          <?php
+
+            include "classes/dbh.class.php";
+
+            $dbs = new Dbh();
+            $usersSql= $dbs->connect()->prepare('SELECT*FROM user;');
+            
+            if($usersSql->execute()){
+                $usersArray = $usersSql->fetchAll(PDO::FETCH_ASSOC);
+            }
+                foreach ($usersArray as $user) {
+                    echo "<tr>";
+                    echo "<td>{$user['user_id']}</td>";
+                    echo "<td>{$user['user_name']}</td>";
+                    echo "<td>{$user['user_password']}</td>";
+                    echo "<td>{$user['user_email']}</td>";
+                    echo "<td>{$user['user_location']}</td>";
+                    echo "<td>{$user['user_birthdate']}</td>";
+                    echo "<td>" . ($user['user_isAdmin'] ? 'Yes' : 'No') . "</td>";
+                    echo "<td class='btn-controls' id='edit-btn'>
+                            <a href=''>Edit</a> 
+                          </td>";
+                    echo "<td class='btn-controls'  id='delete-btn'>
+                    <a href='' >Delete</a> 
+                          </td>";
+                    echo "</tr>";
+
+            }
+        
+            /* while($usersArray = $usersSql->fetchAll(PDO::FETCH_ASSOC)){
+                    echo "
+                     <tr>
+                        <td>$usersArray[user_id]</td>
+                        <td>$usersArray[user_name]</td>
+                        <td>$usersArray[user_password]</td>
+                        <td>$usersArray[user_email]</td>
+                        <td>$usersArray[user_location]</td>
+                        <td>$usersArray[user_birthdate]</td>
+                        <td>$usersArray[user_isAdmin]</td>
+                    </tr>
+                    
+                          ";
+                 
+               
+            }
+                          */
+                    
+            
+            ?>
+                
+<!--
+                <tr>
+                        <td>$usersArray[user_id]</td>
+                        <td>$usersArray[user_name]</td>
+                        <td>$usersArray[user_password]</td>
+                        <td>$usersArray[user_email]</td>
+                        <td>$usersArray[user_location]</td>
+                        <td>$usersArray[user_birthdate]</td>
+                        <td>$usersArray[user_isAdmin]</td>
+            </tr>
+                
+-->
+            
+        </tbody>
+    </table>
+</main>
+
+
+
+
      <script>
 
         const hamburger = document.querySelector(".hamburger");

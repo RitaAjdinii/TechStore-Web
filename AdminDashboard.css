@@ -77,3 +77,35 @@ nav{
     background-color: green;
 }
 
+th{
+    padding:1rem;
+    background-color: transparent;
+}
+
+tr{
+    
+}
+
+td{
+    padding: 1rem;
+    background-color: rgba(142, 142, 142, 0.605);
+}
+
+
+.btn-controls{
+    background-color: transparent;
+    font-weight:bold;
+    font-size:15px;
+    padding:20px;
+    
+}
+
+#edit-btn:hover{
+    background-color: rgb(105, 209, 105);
+}
+
+
+
+#delete-btn:hover{
+    background-color: rgb(251, 67, 67);
+}
