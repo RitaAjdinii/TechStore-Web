@@ -66,48 +66,19 @@
                     echo "<td>{$user['user_birthdate']}</td>";
                     echo "<td>" . ($user['user_isAdmin'] ? 'Yes' : 'No') . "</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
-                            <a href=''>Edit</a> 
+                            <a href='classes/edit.php?id=$user[user_id]'>Edit</a>
                           </td>";
-                    echo "<td class='btn-controls'  id='delete-btn'>
-                    <a href='' >Delete</a> 
+                    echo "<td class='btn-controls'  id='delete-btn'> 
+                    <a href='classes/delete.php?id=$user[user_id]' >Delete</a> 
                           </td>";
                     echo "</tr>";
 
             }
         
-            /* while($usersArray = $usersSql->fetchAll(PDO::FETCH_ASSOC)){
-                    echo "
-                     <tr>
-                        <td>$usersArray[user_id]</td>
-                        <td>$usersArray[user_name]</td>
-                        <td>$usersArray[user_password]</td>
-                        <td>$usersArray[user_email]</td>
-                        <td>$usersArray[user_location]</td>
-                        <td>$usersArray[user_birthdate]</td>
-                        <td>$usersArray[user_isAdmin]</td>
-                    </tr>
-                    
-                          ";
-                 
-               
-            }
-                          */
+
                     
             
             ?>
-                
-<!--
-                <tr>
-                        <td>$usersArray[user_id]</td>
-                        <td>$usersArray[user_name]</td>
-                        <td>$usersArray[user_password]</td>
-                        <td>$usersArray[user_email]</td>
-                        <td>$usersArray[user_location]</td>
-                        <td>$usersArray[user_birthdate]</td>
-                        <td>$usersArray[user_isAdmin]</td>
-            </tr>
-                
--->
             
         </tbody>
     </table>

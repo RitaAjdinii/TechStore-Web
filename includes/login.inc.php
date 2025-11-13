@@ -18,7 +18,7 @@ if(isset($_POST["submit"])){
   if($_SESSION["userAdmin"]==1){
     header("location:../AdminDashboard.php");
   }else{
-    header("location:../ContactUs.php");
+    header("location:../Home.php");
   }
   
  
