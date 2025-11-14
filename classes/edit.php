@@ -43,29 +43,27 @@ if($_SERVER["REQUEST_METHOD"]=='GET'){
     $location = $_POST["location"];
     $birthdate = $_POST["birthdate"];
     $isAdmin = $_POST["isAdmin"];
-
-    do{
-         if(empty($id)||empty($name)||empty($email)||empty($location)||empty($birthdate)||empty(($isAdmin==0 || $isAdmin==1)?true:false)){
+    $condition = true;
+    
+    if($condition){
+        if(empty($id)||empty($name)||empty($email)||empty($location)||empty($birthdate)||empty(($isAdmin==0 || $isAdmin==1)?true:false)){
             $errorMessage = "All fields are required";
-            break;
-
         }else{
             if(!empty($password)){
                 $hashedPassword=password_hash($password,PASSWORD_DEFAULT);
-                 $sql = "UPDATE user "."SET user_name='$name',user_password=$hashedPassword,user_email='$email',user_location='$location',user_birthdate='$birthdate',user_isAdmin='$isAdmin'  "."WHERE user_id='$id';";
+                 $sql=$dbs->connect()->prepare("UPDATE user SET user_name=?,user_password=?,user_email=?,user_location=?,user_birthdate=?,user_isAdmin=? WHERE user_id=?;");
+                 if($sql->execute(array($name,$hashedPassword,$email,$location,$birthdate,$isAdmin,$id))){
+                    echo "<h1>Hashed Executed properly</h1>";
+                 }
             }else{
-                 $sql = "UPDATE user "."SET user_name='$name',user_email='$email',user_location='$location',user_birthdate='$birthdate',user_isAdmin='$isAdmin'  "."WHERE user_id='$id';";
+                 $sql=$dbs->connect()->prepare("UPDATE user SET user_name=?,user_email=?,user_location=?,user_birthdate=?,user_isAdmin=? WHERE user_id=?;");
+                 if($sql->execute(array($name,$email,$location,$birthdate,$isAdmin,$id))){
+                    echo "<h1>SQL Executed properly</h1>";
+                 }
             }
-                $result = $dbs->connect()->prepare($sql);
-                if($result->execute()){
-                    echo"Updated successfully";
-                }
-
+               
         }
-           
-
-    }while(false);
-
+    }
     
        
 
