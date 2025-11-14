@@ -59,17 +59,25 @@ nav a{
 
 
 article{
-    border:3px solid black;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    max-width:400px;
+    outline: 1px solid white;
+    padding:5px;
+    background-color: rgba(135, 135, 135, 0.144);
+    flex-wrap: wrap;
     height:auto;
-    margin-left:5%;
+    width:30%;
+    min-width:180px;
+    margin:10px;
 }
 
-article img{
-    max-height:200px;
 
+article img{
+    height: auto;
+    width:50%;
+    min-width:150px;
 }
 
 .add-cart-btn{
@@ -87,17 +95,28 @@ article img{
     outline: none;
 }
 
-
-.container{
-    background-color: transparent;
+.article-container{
+    background-color: rgba(128, 128, 128, 0.175);
     display: flex;
     justify-content: center;
-}
-.article-container{
-    background-color: transparent;
-    display: flex;
     flex-wrap:wrap;
-    justify-content: flex-start;
-    margin:20px 10%;
     gap:5px;
+    padding:10% 5%;
+    
+}
+
+.price-tag{
+    color: white;
+    font-size:25px;
+}
+
+.product-name-tag{
+    color: white;
+    font-size:20px;
+}
+
+.product-description{
+    color: white;
+    text-wrap: wrap;
+    max-width:80%;
 }

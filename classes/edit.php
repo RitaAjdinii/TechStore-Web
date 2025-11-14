@@ -43,9 +43,9 @@ if($_SERVER["REQUEST_METHOD"]=='GET'){
     $location = $_POST["location"];
     $birthdate = $_POST["birthdate"];
     $isAdmin = $_POST["isAdmin"];
-    $condition = true;
+
     
-    if($condition){
+
         if(empty($id)||empty($name)||empty($email)||empty($location)||empty($birthdate)||empty(($isAdmin==0 || $isAdmin==1)?true:false)){
             $errorMessage = "All fields are required";
         }else{
@@ -63,7 +63,7 @@ if($_SERVER["REQUEST_METHOD"]=='GET'){
             }
                
         }
-    }
+    
     
        
 

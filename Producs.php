@@ -24,68 +24,62 @@
             <li class="nav-item"><a href="Signup.html">Sign up</a></li>
         </ul>
     </nav>
-    <div class="container">
-       <div class="article-container">
-      <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    
-     <article class="buy-item">
-       <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-       <p>ASUS ROG Strix G16 (2024) Gaming Laptop, 16”</p>
-       <span>1209$</span>
-       <button class="add-cart-btn">ADD TO CART</button >
-    </article>
-    
-    
-    
-   
+    <main>
+      <div class="article-container">
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
+       <article>
+         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
+         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
+         <span class="price-tag">1299$</span>
+         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
+         <button class="add-cart-btn">Add to cart</button>
+       </article>
     </div>
 
-         
-    </div>
+    </main>
+
+      
       
 </body>
 </html>
