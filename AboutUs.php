@@ -15,22 +15,30 @@
 </head>
 <body>
      <nav>
-        <a href="/Logo" class="display"><img src="Images/logo.svg" ></a>
-        <a href="Cart" class="display"><img src="Images/cart.svg" alt=""></a>
-       
-         <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-         </div>
         <ul class="nav-list">
+           <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
             <li class="nav-item"><a href="/Logo"><img src="Images/logo.svg"  class="logo"></a></li>
             <li class="nav-item"><a  href="Home.php">Home</a></li>
             <li class="nav-item"><a href="Producs.php">Products</a></li>
             <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
             <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
-            <li class="nav-item"><a href="Cart"><img src="Images/cart.svg" alt=""></a></li>
+            <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
             <li class="nav-item"><a href="Signup.php">Sign up</a></li>
         </ul>
+        <div class="click-menu-addition">
+          <ul class="nav-edited">
+            <li class="item-edited"><a  href="Home.php">Home</a></li>
+             <li class="item-edited"><a href="Producs.php">Products</a></li>
+             <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
+             <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
+             <li class="item-edited"><a href="/Cart">Cart</a></li>
+             <li class="item-edited"><a href="Signup.php">Sign up</a></li>
+          </ul>
+        </div>
     </nav>
 
     <div class="content-container">
@@ -114,5 +122,15 @@
     <footer>
         
     </footer>
+     <script>
+      const hamburger = document.querySelector(".hamburger-menu");
+      const navList = document.querySelector(".nav-list");
+      const clickMenu = document.querySelector(".click-menu-addition");
+
+    hamburger.addEventListener("click",()=>{
+      clickMenu.classList.toggle("on");
+      hamburger.classList.toggle("rotate");
+    });
+    </script>
 </body>
 </html>
