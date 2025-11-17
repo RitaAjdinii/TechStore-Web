@@ -6,9 +6,6 @@ if(isset($_POST["submit"])){
      $name = $_POST['product-name'];
      $description= $_POST['product-description'];
      $price = $_POST['price'];
-    echo "<h1>Congrats.your data has been submited!!!</h1>";
-    echo $image.":".$name.":".$description.":".$price;
-
     include "../classes/dbh.class.php";
     include "../classes/product.class.php";
     include "../classes/product-contr.php";
@@ -16,5 +13,6 @@ if(isset($_POST["submit"])){
     $product = new ProductContr($image,$name,$description,$price);
       $product->createProduct();
        header("location:../product-add.php?error=none");
+       echo "<h1>Congrats.your data has been submited!!!</h1>";
 
 }

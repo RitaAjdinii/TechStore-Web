@@ -86,7 +86,7 @@ tr{
     
 }
 
-td{
+.user,.product{
     padding: 1rem;
     background-color: rgba(142, 142, 142, 0.605);
 }
@@ -109,3 +109,5 @@ td{
 #delete-btn:hover{
     background-color: rgb(251, 67, 67);
 }
+
+

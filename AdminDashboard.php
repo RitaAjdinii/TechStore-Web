@@ -20,8 +20,8 @@
             <li>Admin profile</li> 
             <li>Home Page edit</li>
             <li>Contact Us edit</li>
-            <li><a href="">Products Add</a></li>
-            <li><a href="ProductsTable.php">Products Table</a></li>
+            <li><a href="product-add.php">Products Add</a></li>
+            <li><a href="products-table.php">Products Table</a></li>
             <li>About Us Edit</li>
             <li>Login Edit</li>
             <li>Signup Edit</li>
@@ -59,13 +59,13 @@
             }
                 foreach ($usersArray as $user) {
                     echo "<tr>";
-                    echo "<td>{$user['user_id']}</td>";
-                    echo "<td>{$user['user_name']}</td>";
-                    echo "<td>{$user['user_password']}</td>";
-                    echo "<td>{$user['user_email']}</td>";
-                    echo "<td>{$user['user_location']}</td>";
-                    echo "<td>{$user['user_birthdate']}</td>";
-                    echo "<td>" . ($user['user_isAdmin'] ? 'Yes' : 'No') . "</td>";
+                    echo "<td class='user'>{$user['user_id']}</td>";
+                    echo "<td class='user'>{$user['user_name']}</td>";
+                    echo "<td class='user'>{$user['user_password']}</td>";
+                    echo "<td class='user'>{$user['user_email']}</td>";
+                    echo "<td class='user'>{$user['user_location']}</td>";
+                    echo "<td class='user'>{$user['user_birthdate']}</td>";
+                    echo "<td class='user'>" . ($user['user_isAdmin'] ? 'Yes' : 'No') . "</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
                             <a href='classes/edit.php?id=$user[user_id]'>Edit</a>
                           </td>";
