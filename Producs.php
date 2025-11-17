@@ -26,7 +26,7 @@
             <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
             <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
             <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
-            <li class="nav-item"><a href="Signup.php">Sign up</a></li>
+            <li class="nav-item"><a href="Login.php">Sign up</a></li>
         </ul>
         <div class="click-menu-addition">
           <ul class="nav-edited">
@@ -35,7 +35,7 @@
              <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
              <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
              <li class="item-edited"><a href="/Cart">Cart</a></li>
-             <li class="item-edited"><a href="Signup.php">Sign up</a></li>
+             <li class="item-edited"><a href="Login.php">Sign up</a></li>
           </ul>
         </div>
     </nav>
@@ -47,49 +47,28 @@
          <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
          <button class="add-cart-btn">Add to cart</button>
        </article>
-       <article>
+
+
+
+
+
+
+       <!--
+  
+<article>
          <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
          <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
          <span class="price-tag">1299$</span>
          <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
          <button class="add-cart-btn">Add to cart</button>
        </article>
-       <article>
-         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
-         <span class="price-tag">1299$</span>
-         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
-         <button class="add-cart-btn">Add to cart</button>
-       </article>
-       <article>
-         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
-         <span class="price-tag">1299$</span>
-         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
-         <button class="add-cart-btn">Add to cart</button>
-       </article>
-       <article>
-         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
-         <span class="price-tag">1299$</span>
-         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
-         <button class="add-cart-btn">Add to cart</button>
-       </article>
-       <article>
-         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
-         <span class="price-tag">1299$</span>
-         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
-         <button class="add-cart-btn">Add to cart</button>
-       </article>
-       <article>
-         <img src="images/ASUS ROG Strix G16 (2024) Gaming Laptop, 16”.webp" alt=""> 
-         <h3 class="product-name-tag">ASUS ROG Strix G16 (2024) Gaming Laptop, 16</h3>
-         <span class="price-tag">1299$</span>
-         <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe ipsum vitae corporis enim, odio amet officia consectetur quod dolorum <a href="">more...</a></p>
-         <button class="add-cart-btn">Add to cart</button>
-       </article>
+
+-->
+
     </main>
+
+
+
 
     <script>
       const hamburger = document.querySelector(".hamburger-menu");

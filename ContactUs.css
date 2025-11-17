@@ -149,31 +149,7 @@ h1{
 
 
 
-@media screen and (max-width: 1200px) {
-    .nav-list{
-        display: none;
-    }
 
-    .hamburger .line{
-        height:1px;
-        width:30px;
-        background-color: rgb(253, 253, 253);
-    
-    }
-    nav{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        padding:0 5%;
-    }
-
-    .hamburger{
-        display: none;
-    }
-
-
-
-}
 
 
 .hamburger{

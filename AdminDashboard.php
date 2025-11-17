@@ -20,7 +20,8 @@
             <li>Admin profile</li> 
             <li>Home Page edit</li>
             <li>Contact Us edit</li>
-            <li>Products Edit</li>
+            <li><a href="">Products Add</a></li>
+            <li><a href="ProductsTable.php">Products Table</a></li>
             <li>About Us Edit</li>
             <li>Login Edit</li>
             <li>Signup Edit</li>
