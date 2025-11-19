@@ -2,13 +2,15 @@
 
 class ProductContr extends Product{
     
-    private $image;
+    private $imageFileName;
+    private $imageFilePath;
     private $name;
     private $description;
     private $price;
 
-    public function  __construct($image,$name,$description,$price){
-        $this->image = $image;
+    public function  __construct($imageFileName,$imageFilePath,$name,$description,$price){
+        $this->imageFileName = $imageFileName;
+         $this->imageFilePath = $imageFilePath;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
@@ -16,7 +18,7 @@ class ProductContr extends Product{
 
 
     public function createProduct(){
-        $this->setProduct($this->image,$this->name,$this->description,$this->price);
+        $this->setProduct($this->imageFileName,$this->imageFilePath,$this->name,$this->description,$this->price);
     }
 
 
