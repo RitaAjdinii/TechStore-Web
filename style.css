@@ -1,0 +1,626 @@
+
+:where(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+
+body{
+background-color: #F9DBBB;
+word-break: break-word;
+}
+
+
+
+/*navbar-section*/
+nav{
+    display: flex;
+    height: auto;
+    background-color: transparent;
+    height:100px;
+    width:100%;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight:500;
+    font-family: Arial, Helvetica, sans-serif;
+    height:100%;
+    width:120px;
+    color: #2E3840;
+}
+
+nav .logo{
+    text-shadow: 3px 3px #FF0303;
+    font-size:30px;
+}
+
+.logo{
+     font-weight: bolder;
+     color: white;
+     font-size:35px;
+     text-shadow: 3px 3px #FF0303;
+     text-decoration: none;
+}
+
+
+.nav-list{
+    display: flex;
+     background-color: transparent;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height:90%;
+}
+
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    height:100%;
+    width:120px;
+}
+
+.nav-item:hover{
+    color:grey;
+    border-bottom:2px solid #2E3840;
+}
+
+
+.hamburger-menu{
+    display: none;
+    flex-direction:column;
+    gap:5px;
+    cursor: pointer;
+    margin-left:5%;
+    transition:rotate 200ms;
+}
+
+.line{
+    background-color: #2E3840;
+    height:3px;
+    width:30px;
+}
+
+.click-menu-addition{
+    width:100%;
+    display: none;
+    background-color: transparent;
+}
+
+
+.on{
+    height:250px;
+    display: none;
+    background-color: transparent;
+}
+
+.rotate{
+    rotate:90deg;
+}
+
+.edited{
+    color: white;
+}
+
+
+.item-edited a{
+    display: none;
+}
+
+.nav-edited{
+    display: none;
+}
+
+.item-edited{
+    display: none;
+}
+
+
+
+
+@media(max-width:1000px){
+    .on{
+        display: block;
+    }
+    nav{
+        height:auto;
+        flex-direction: column;
+         background-color: transparent;
+    }
+    .hamburger-menu{
+        display: flex;
+    }
+    .nav-list{
+        width:100%;
+         background-color: transparent;
+        display: flex;
+        justify-content: flex-start;
+        height:100px;
+        border: none;
+    }
+    
+    .nav-edited{
+        display: flex;
+        flex-direction: column;
+        height:300px;
+        background-color: transparent;
+        width: auto;
+    }
+
+    .nav-edited .item-edited a{
+        font-size:22px;
+        display: block;
+    }
+    .item-edited{
+        text-align: center;
+        padding:5px;
+        display: block;
+    }
+    nav{
+        width:100%;
+         background-color: transparent;
+    }
+
+    .nav-item{
+        display: none;
+    }
+}
+/*Home page*/
+/*main home slider*/
+#main-slider{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:600px;
+    width: 100%;
+    background-image:url("Images/razer-blade16-homepage.webp");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    padding-top:50px;
+}
+
+
+
+h1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-shadow: 2px 2px black;
+    font-size: 3em;
+    text-align: center;
+
+}
+
+#main-slider span{
+    
+}
+
+.spanz{
+    max-width:50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+
+    
+}
+
+#main-slider div{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+    
+}
+
+ .spanz a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    font-size: 2em;
+    text-align: center;
+
+
+    
+}
+
+
+.spanz a:hover{
+    border-bottom:1px solid white;
+}
+
+
+
+.green{
+    color: #0eaf0e;
+    margin-left:8px;
+    font-size: 20px;
+}
+
+
+
+
+#create-id,#create-acc{
+    font-size: 27px;
+    text-align: center;
+    margin-top:8px;
+   color: rgb(232, 232, 232);
+    font-weight:bold;
+    font-size: 2em;
+    word-break: break-word;
+
+}
+
+.controls{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.controls button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.controls button:hover{
+    background-color: transparent;
+}
+
+
+
+
+
+
+
+.main-image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:600px;
+    width: 100%;
+    background-image:url("Images/HomeImageEsports.webp");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    padding-top:50px;
+}
+
+
+/*about-us-page-styling**/
+
+
+
+.about-us-section{
+    width:100%;
+    min-height:100vh;
+   background-color: #F9DBBB;
+}
+
+
+.about-us-container{
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    padding-top:100px;
+
+}
+
+
+.about-us-content-section{
+    display: flex;
+    width:100%;
+}
+
+
+.about-image-section{
+    float:right;
+    margin-top:30px;
+    width:100%;
+}
+
+.about-image-section img{
+    width:100%;
+    height:auto;
+}
+
+.about-us-content-section .about-us-title{
+    text-transform: uppercase;
+    font-size:1.5rem;
+    color:#2E3840;
+}
+
+.about-us-title a{
+    text-shadow: 6px 6px #FF0303;
+    text-decoration: none;
+    color: white;
+
+}
+ .about-us-content h3{
+    margin-top:20px;
+    color: #2E3840;
+}
+
+
+.about-us-content-section .about-us-content .about-us-content-paragraph{
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.about-us-content-btn {
+    margin-top: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.about-us-content-btn a{
+    background-color: #2E3840;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.about-us-content-btn a:hover{
+    background-color: #FF0303;
+    color: #fff;
+}
+
+
+
+@media screen and(max-width:768px){
+    .about-us-container{
+        width:80%;
+        display: block;
+        margin: auto;
+        padding-top:50px;
+    }
+
+    .about-us-content-section{
+        float: none;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .about-image-section{
+        float: none;
+        width:100%;
+        display: block;
+        margin: auto;
+    }
+
+    .about-image-section img{
+        width:100%;
+        height:auto;
+
+    }
+
+    .about-us-content .about-us-title{
+        text-align: center;
+        font-size: 19px;
+    }
+
+
+    .about-us-content-btn{
+        text-align: center;
+        
+    }
+
+    
+    .about-us-content-btn a{  
+        padding: 9px 30px;
+
+    }
+
+}
+
+
+/*LOGIN AND SIGNUP*/
+
+
+.form-container{
+    width:100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+
+.login-container,.signup-container{
+    background-color: transparent;
+    height: 430px;
+    width:450px;
+    border:1px solid #4E6E81;
+}
+
+
+.signup-container{
+    height:600px;
+}
+.create-account-h3{
+    height: 100px;
+    font-size: 27px;
+    color: #2E3840;
+    font-weight: 100;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left:20px;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form input{
+    height:45px;
+    width:91%;
+    background:transparent;
+    border:1px solid grey;
+    color:grey;
+    font-size: 13px;
+    padding-left:10px;
+}
+
+form input:first-of-type{
+    margin-bottom:20px;
+}
+
+form input:focus{
+    outline:1px solid #0eaf0e;
+    border:none;
+}
+
+#forgor{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-top:18px;
+    font-size:15px;
+}
+
+#forgor a{
+    text-decoration:none;
+    color: grey;
+    font-family: sans-serif;
+    text-align: end;
+}
+
+#forgor a:hover{
+    color: #0eaf0e;
+}
+
+#acc,#create-id{
+    width: 90%;
+    text-align: center;
+    margin-top:18px;
+    
+}
+
+#location{
+    background-color: transparent;
+    height:45px;
+    width:91%;
+    background:transparent;
+    border:1px solid grey;
+    color:grey;
+    font-size: 13px;
+    padding-left:10px;
+}
+
+#location option{
+    background-color:rgb(46, 46, 46);
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    
+}
+
+
+
+#acc a{
+    text-decoration:none;
+    color: rgb(203, 203, 203);
+    font-family: sans-serif;
+    text-align: end;
+    font-size:15px;
+}
+
+#create-id a{
+    text-decoration:none;
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+#create-id a:hover{
+    color: #0eaf0e;
+}
+
+
+
+#login-btn{
+    height:45px;
+    width:91%;
+    background-color: #1166119b;
+    color:rgba(0, 0, 0, 0.777);
+    font-size: 15px;
+    font-weight: bold;
+    margin-top:18px;
+    border-radius: 3px;
+    border: none;
+}
+
+.green{
+    color: #0eaf0e;
+    margin-left:8px;
+    font-size: 20px;
+}
+
+
+
+.off{
+    display: none;
+}
+
+
+#acc:hover{
+    color: rgb(0, 255, 0);
+    cursor: pointer;
+}
+
+
+
+#admin{
+    color: rgb(203, 203, 203);
+    width: 500px;
+    font-size:15px;
+    margin-left:100px;
+    margin-top:50px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top:100px;
+    
+}
+
+#admin-check{
+    font-size:10px;
+    height:15px;
+    width:50px;
+    margin-right:90px;
+    margin-top:20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+
+
+footer{
+    height:20%;
+    background-color: #2E3840;
+    min-height:150px;
+    width: 100%;
+}

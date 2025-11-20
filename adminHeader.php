@@ -13,7 +13,7 @@
             <li>Contact Us edit</li>
             <li><a href="product-add.php">Products Add</a></li>
             <li><a href="products-table.php">Products Table</a></li>
-            <li>About Us Edit</li>
+            <li><a href="about-us-admin.php">About Us</a></li>
             <li>Login Edit</li>
             <li>Signup Edit</li>
             <li>Add Pages++</li>

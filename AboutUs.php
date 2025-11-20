@@ -4,133 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="AboutUs.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Home.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <nav>
-        <ul class="nav-list">
-           <div class="hamburger-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-            <li class="nav-item"><a href="/Logo"><img src="Images/logo.svg"  class="logo"></a></li>
-            <li class="nav-item"><a  href="Home.php">Home</a></li>
-            <li class="nav-item"><a href="Producs.php">Products</a></li>
-            <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
-            <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
-            <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
-            <li class="nav-item"><a href="Login.php">Sign up</a></li>
-        </ul>
-        <div class="click-menu-addition">
-          <ul class="nav-edited">
-            <li class="item-edited"><a  href="Home.php">Home</a></li>
-             <li class="item-edited"><a href="Producs.php">Products</a></li>
-             <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
-             <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
-             <li class="item-edited"><a href="/Cart">Cart</a></li>
-             <li class="item-edited"><a href="Login.php">Sign up</a></li>
-          </ul>
-        </div>
-    </nav>
-
-    <div class="content-container">
-        <h1>ABOUT TEKK</h1>
-        <h3>Razer™ is the world’s leading lifestyle brand made For Gamers. By Gamers.</h3>
-        <p class="about-undertext">The triple-headed snake trademark of Razer is one of the most recognized logos in the global gaming and esports communities. With a fan base that spans every continent, Razer has designed and built the world’s largest gamer-focused ecosystem of hardware, software and services.</p>
-        <div class="about-image">
-            <img src="Images/razorSave.jpg" alt="">
-        </div>
-        <div class="long-text-container">
-            <p class="long-text1">Razer’s award-winning hardware includes high-performance gaming peripherals and Blade gaming laptops.</p>
-            <div class="long-text1">Razer’s software suite, which consists of Razer Chroma RGB, Razer Synapse and more, boasts over 200 million users, offering customization, lighting effects and optimization.</div>
-            <div class="long-text1">Razer also offers payment services for gamers, youth, millennials and Gen Z, through Razer Gold, one of the world’s largest game payment services to 50,000 over games and Razer Silver, the accompanying rewards program.</div>
-            <div class="long-text1">Razer is committed towards a sustainable future and is taking responsibility through its #GoGreenWithRazer movement – its 10-year roadmap that aims to minimize environmental impact through its various initiatives.</div>
-            <div class="long-text1">Founded in 2005, Razer is dual headquartered in Irvine, California and Singapore, with regional headquarters in Hamburg and Shanghai and 19 offices worldwide.</div>
-        </div> 
-     <div class="history-container">
-        <h2>HISTORY</h2>
-       <ul class="history-list">
-            <li>Razer brought home a total of 46 awards at CES2023, including Best of CES from Windows Central, PC Gamer, CNN Underscored and more.</li>
-            <li>At CES, the Razer Kiyo Pro Ultra Ultra-large Sensor 4K Webcam for Content Creation received 8 "Best of CES 2023" awards.</li>
-            <li>Razer also launched it's first in-ear monitors, the Razer Moray – a new product category, catering to gamers and marathon streamers.</li>
-            <li>Razer became the #1 PC Gaming Headset Brand in the US*</li>
-            <li>Razer kickstarted the zVentures Web 3 Incubator to build the next generation of blockchain-enabled gaming companies and projects.​</li>
-            <li>Flying the Team Razer Banner high, Lee "Faker" Sang-hyeok, became the first player to win the League of Legends World Championship four times. The Grand Finals was also the most watched World Championship with over 6.4MM peak concurrent viewers.</li>
-            <li>In total, athletes under the Team Razer banner brought home 12 podium finishes including Asian Games, APEX Legends Global Championship and ESL Pro League Season 18 Champions.</li>
-       </ul>
-     </div>
-
-     <div class="accolades">
-        <h2>ACCOLADES</h2>
-        <div class="accolades-container">
-            <section class="ac-section">
-                <article class="ac-item">
+    <?php include "header.php";?>
+    <main>
+        <div class="about-us-section">
+            <div class="about-us-container">
+                <div class="about-us-content-section">
+                    <div class="about-us-title">
+                          <h1>ABOUT <a href="">TEKK</a></h1>
+                    </div>
+                </div>
+                <div class="about-us-content">
+                    <h3>TEKK™ is the world’s leading lifestyle brand made For Gamers. By Gamers.</h3>
+                    <p class="about-us-content-paragraph">
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi inventore veniam facere adipisci soluta fugit itaque ex, sit voluptates suscipit voluptate quidem cum rerum quod modi placeat necessitatibus optio. Voluptatum, ex laboriosam. Pariatur totam, perferendis deserunt quia eos ullam ea voluptatem animi, dolorem deleniti commodi quo ex incidunt facilis asperiores.
+                    </p>
+                    <button class="about-us-content-btn">
+                        <a href="">Read More</a>
+                    </button>
+                </div>
+                 <div class="about-image-section">
                     <img src="Images/accolades-pc.jpg" alt="">
-                    <h4>PC</h4>
-                    <p class="ac-description">
-                        Build your battle station with Razer’s suite of award-winning peripherals, Blade laptops, software platforms, and streaming products. The Blade continues to be the pinnacle of gaming laptops, and the Editor’s Choice of PCMag and the Best Laptop among others – but the most powerful rigs mean nothing without the high-performance gear to match. Whether it’s TechRadar’s ‘Editor’s Choice’ for gaming keyboards, the Huntsman V2 Analog, or the DeathAdder V2, winner of the ‘Best Gaming Mouse’ at the T3 Awards, or The Independent’s ‘Indy Best Award’ winner, the much-lauded BlackShark V2 Pro gaming headset – experience what it means to wield the unfair advantage as you experience industry-leading levels of precision, control, and immersion.
-                    </p>
-                </article>
-                <article class="ac-item">
-                    <img src="Images/accolades-console.jpg" alt="">
-                    <h4>CONSOLE</h4>
-                    <p class="ac-description">
-                        Build your battle station with Razer’s suite of award-winning peripherals, Blade laptops, software platforms, and streaming products. The Blade continues to be the pinnacle of gaming laptops, and the Editor’s Choice of PCMag and the Best Laptop among others – but the most powerful rigs mean nothing without the high-performance gear to match. Whether it’s TechRadar’s ‘Editor’s Choice’ for gaming keyboards, the Huntsman V2 Analog, or the DeathAdder V2, winner of the ‘Best Gaming Mouse’ at the T3 Awards, or The Independent’s ‘Indy Best Award’ winner, the much-lauded BlackShark V2 Pro gaming headset – experience what it means to wield the unfair advantage as you experience industry-leading levels of precision, control, and immersion.
-                    </p>
-                </article>
-                <article class="ac-item">
-                    <img src="Images/accolades-mobile.jpg" alt="">
-                    <h4>MOBILE</h4>
-                    <p class="ac-description">
-                        Build your battle station with Razer’s suite of award-winning peripherals, Blade laptops, software platforms, and streaming products. The Blade continues to be the pinnacle of gaming laptops, and the Editor’s Choice of PCMag and the Best Laptop among others – but the most powerful rigs mean nothing without the high-performance gear to match. Whether it’s TechRadar’s ‘Editor’s Choice’ for gaming keyboards, the Huntsman V2 Analog, or the DeathAdder V2, winner of the ‘Best Gaming Mouse’ at the T3 Awards, or The Independent’s ‘Indy Best Award’ winner, the much-lauded BlackShark V2 Pro gaming headset – experience what it means to wield the unfair advantage as you experience industry-leading levels of precision, control, and immersion.
-                    </p>
-                </article>
-                <article class="ac-item">
-                    <img src="Images/accolades-lifestyle.jpg" alt="">
-                    <h4>LIFESTYLE</h4>
-                    <p class="ac-description">
-                        Build your battle station with Razer’s suite of award-winning peripherals, Blade laptops, software platforms, and streaming products. The Blade continues to be the pinnacle of gaming laptops, and the Editor’s Choice of PCMag and the Best Laptop among others – but the most powerful rigs mean nothing without the high-performance gear to match. Whether it’s TechRadar’s ‘Editor’s Choice’ for gaming keyboards, the Huntsman V2 Analog, or the DeathAdder V2, winner of the ‘Best Gaming Mouse’ at the T3 Awards, or The Independent’s ‘Indy Best Award’ winner, the much-lauded BlackShark V2 Pro gaming headset – experience what it means to wield the unfair advantage as you experience industry-leading levels of precision, control, and immersion.
-                    </p>
-                </article>
-                <article class="ac-item">
-                    <img src="Images/accolades--services.jpg" alt="">
-                    <h4>SERVICES</h4>
-                    <p class="ac-description">
-                        Build your battle station with Razer’s suite of award-winning peripherals, Blade laptops, software platforms, and streaming products. The Blade continues to be the pinnacle of gaming laptops, and the Editor’s Choice of PCMag and the Best Laptop among others – but the most powerful rigs mean nothing without the high-performance gear to match. Whether it’s TechRadar’s ‘Editor’s Choice’ for gaming keyboards, the Huntsman V2 Analog, or the DeathAdder V2, winner of the ‘Best Gaming Mouse’ at the T3 Awards, or The Independent’s ‘Indy Best Award’ winner, the much-lauded BlackShark V2 Pro gaming headset – experience what it means to wield the unfair advantage as you experience industry-leading levels of precision, control, and immersion.
-                    </p>
-                </article>
-            </section>
                  </div>
-    
-    
-           </div>
+
+            </div>
         </div>
-    </div>
+    </main>
 
 
-    </div>
-    </div>
 
     <footer>
         
     </footer>
-     <script>
-      const hamburger = document.querySelector(".hamburger-menu");
-      const navList = document.querySelector(".nav-list");
-      const clickMenu = document.querySelector(".click-menu-addition");
-
-    hamburger.addEventListener("click",()=>{
-      clickMenu.classList.toggle("on");
-      hamburger.classList.toggle("rotate");
-    });
+     <script src="navbar.js">
     </script>
 </body>
 </html>

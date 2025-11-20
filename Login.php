@@ -9,24 +9,14 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="Login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul class="nav-list">
-            <li class="nav-item"><a href="Home.php"><img src="Images/logo.svg"  class="logo">TechStore ID</a></li>
-            <li class="nav-item"><a href=""><img src="Images/world.svg"></a></li>
-        </ul>
-    </nav>
+    <?php include "header.php";?>
 
-
-
-    <div class="container login_container">
+    <div class="form-container login_container">
         <div class="login-container">
-            <h3>TECH ID LOGIN</h3>
+            <h3><a href="logo" class="logo" >TEKK</a>LOGIN</h3>
             <form action="includes/login.inc.php" method="post">
                 <input type="text" name="email" placeholder="EMAIL ">
                 <input type="password"name="password" placeholder="PASSWORD">
@@ -38,16 +28,14 @@ session_start();
         </div>
     </div>
 
-    <?php
-     $php_test = $_SESSION["userid"];
-    ?>
 
 
 
-        <div class="container signup_container off">
+
+        <div class="form-container signup_container off">
             <div class="signup-container">
                 <div class="top-text">
-                    <h3>CREATE RAZER ID ACCOUNT</h3>
+                    <h3 class="create-account-h3">CREATE RAZER ID ACCOUNT</h3>
                     <p id="tekk-id">Tekk ID is a unified account for all TEKK devices</p>    
                 </div>
                 <form action="includes/signup.inc.php" method="post">
@@ -109,5 +97,6 @@ session_start();
 
 
     </script>
+    <script src="navbar.js"></script>
 </body>
 </html>
