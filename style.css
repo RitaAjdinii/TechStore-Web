@@ -11,7 +11,17 @@
 body{
 background-color: #F9DBBB;
 word-break: break-word;
+min-height:1000px;
+display: flex;
+flex-direction: column;
 }
+
+main{
+    height:100%;
+    padding-top:5%;
+}
+
+
 
 
 
@@ -19,7 +29,9 @@ word-break: break-word;
 nav{
     display: flex;
     height: auto;
-    background-color: transparent;
+    position:sticky;
+    top:0.5px;
+    background-color:transparent;
     height:100px;
     width:100%;
 }
@@ -72,7 +84,7 @@ nav .logo{
 }
 
 .nav-item:hover{
-    color:grey;
+
     border-bottom:2px solid #2E3840;
 }
 
@@ -87,7 +99,7 @@ nav .logo{
 }
 
 .line{
-    background-color: #2E3840;
+    background-color: #F9DBBB;
     height:3px;
     width:30px;
 }
@@ -136,14 +148,12 @@ nav .logo{
     nav{
         height:auto;
         flex-direction: column;
-         background-color: transparent;
     }
     .hamburger-menu{
         display: flex;
     }
     .nav-list{
         width:100%;
-         background-color: transparent;
         display: flex;
         justify-content: flex-start;
         height:100px;
@@ -169,7 +179,6 @@ nav .logo{
     }
     nav{
         width:100%;
-         background-color: transparent;
     }
 
     .nav-item{
@@ -192,8 +201,7 @@ nav .logo{
 }
 
 
-
-h1{
+.main-slider-h1{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
@@ -203,9 +211,6 @@ h1{
 
 }
 
-#main-slider span{
-    
-}
 
 .spanz{
     max-width:50%;
@@ -284,9 +289,6 @@ h1{
 
 
 
-
-
-
 .main-image-container{
     display: flex;
     flex-direction: column;
@@ -339,11 +341,45 @@ h1{
     height:auto;
 }
 
-.about-us-content-section .about-us-title{
+.about-us-title h1{
+    color: #FF0303;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-shadow: 6px 6px #2E3840;
+    font-size: 3em;
+    text-align: center;
+}
+.about-us-content-section .about-us-title {
     text-transform: uppercase;
-    font-size:1.5rem;
+    font-size:30px;/*change to 1.2 when on mobile query*/
     color:#2E3840;
 }
+
+@media(max-width:750px){
+    .about-us-content-section .about-us-title{
+        font-size:20px;
+    }
+    .about-us-title h1{
+         text-shadow: 3px 3px #2E3840;
+    }
+    .about-us-title h1 a{
+        text-shadow: 3px 3px #FF0303;
+    }
+
+}
+
+@media(max-width:507px){
+    .about-us-content-section .about-us-title {
+        font-size:15px;
+    }
+    
+}
+
+
+
+
+
+
 
 .about-us-title a{
     text-shadow: 6px 6px #FF0303;
@@ -351,6 +387,7 @@ h1{
     color: white;
 
 }
+
  .about-us-content h3{
     margin-top:20px;
     color: #2E3840;
@@ -370,7 +407,7 @@ h1{
 }
 
 .about-us-content-btn a{
-    background-color: #2E3840;
+    background-color: #4E6E81;
     padding: 12px 40px;
     text-decoration: none;
     color: #fff;
@@ -381,6 +418,7 @@ h1{
 .about-us-content-btn a:hover{
     background-color: #FF0303;
     color: #fff;
+    box-shadow: 6px 6px #2E3840;
 }
 
 
@@ -413,10 +451,10 @@ h1{
 
     }
 
-    .about-us-content .about-us-title{
+    .about-us-content-section .about-us-title{
         text-align: center;
-        font-size: 19px;
     }
+   
 
 
     .about-us-content-btn{
@@ -430,11 +468,104 @@ h1{
 
     }
 
+
+
 }
 
 
-/*LOGIN AND SIGNUP*/
+/*PRODUCTS PAGE*/
+.products-body{
+background-color: #4E6E81;
+}
+.main-page-products{
+    background-color: transparent;
+    height:100%;
+}
 
+.product-cards-container{
+    background-color: transparent ;
+    height:75%;
+    width: 75%;
+    margin:75px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    grid-gap:25px;
+    padding: 20px;
+}
+
+.product-cards-container .card{
+    outline:1px solid #F9DBBB;
+    color:white;
+}
+
+.image-section{
+    min-height: 250px;
+}
+
+.card .img-one{
+    background-image: url("Images/HomeImageBorderlands.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card .img-two{
+    background-image: url("Images/HomeImageBorderlands.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.card .img-three{
+    background-image: url("Images/HomeImageBorderlands.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.card .content{
+    text-align: center;
+    padding:20px 15px;   
+}
+
+.card .content h2{
+    letter-spacing: 2px;
+}
+
+.card .content p{
+    font-size: 16px;
+    color:#f3f8fb;
+    margin:15px 0px;
+}
+.card .content h3{
+    color:#F9DBBB;
+    padding:2px;
+}
+
+.card .content a{
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    color: #222;
+    letter-spacing: 2px;
+    display: inline-block;
+    background-color: #2E3840;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card .content a:hover{
+    background-color: #FF0303;
+    box-shadow: 3px 3px #2E3840;
+}
+
+
+
+/*LOGIN AND SIGNUP*/
 
 .form-container{
     width:100%;
@@ -617,10 +748,44 @@ form input:focus{
 
 
 
+/*footer*/
 
-footer{
-    height:20%;
-    background-color: #2E3840;
-    min-height:150px;
-    width: 100%;
+
+.footer{
+   
+    font-weight: 400;
+    width:100%;
+    background-color: #4E6E81;
+    padding:40px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left:5%;
+    margin-top: auto;
 }
+
+
+
+.footer .footer-page-list{
+    margin-top:0;
+    padding:0;
+    list-style: none;
+    font-size: 20px;
+    line-height:1.6;
+    margin-bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .footer-page-list li a{
+    display: inline-block;
+    padding:0 15px;
+    color: #F9DBBB;
+
+}
+
+.footer .footer-page-list li a:hover{
+    opacity:1;
+}
+

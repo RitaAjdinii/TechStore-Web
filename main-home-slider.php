@@ -1,6 +1,6 @@
 
 <div id="main-slider">
-        <h1>MEET THE ALL-NEW RAZER-BLADE 16</h1>
+        <h1 class="main-slider-h1">MEET THE ALL-NEW RAZER-BLADE 16</h1>
         <p>SLIMMER.SMARTER.SHARPER</p>
         <div class="spanz">
             <a href="" >Learn more<span class="green">></span></a>

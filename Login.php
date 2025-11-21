@@ -13,8 +13,8 @@ session_start();
 </head>
 <body>
     <?php include "header.php";?>
-
-    <div class="form-container login_container">
+    <main>
+        <div class="form-container login_container">
         <div class="login-container">
             <h3><a href="logo" class="logo" >TEKK</a>LOGIN</h3>
             <form action="includes/login.inc.php" method="post">
@@ -72,6 +72,34 @@ session_start();
             </div>
     </div>
 
+
+    </main>
+
+    <footer class="footer">
+        <ul class="footer-page-list">
+            <li>
+                <a>Home</a>
+            </li>
+            <li>
+                <a>Products</a>
+            </li>
+            <li>
+                <a>Contact Us</a>
+            </li>
+            <li>
+                <a>About Us</a>
+            </li>
+            <li>
+                <a>Cart</a>
+            </li>
+            <li>
+                <a>Login</a>
+            </li>
+        </ul>
+        <ul class="footer-social-list">
+            
+        </ul>
+    </footer>
     <script>
     
 
