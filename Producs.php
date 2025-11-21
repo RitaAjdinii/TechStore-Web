@@ -11,122 +11,35 @@
     <main class="main-page-products">
 
     <section class="product-cards-container">
+        <?php
 
+        $dir = "Images//";
+          include "classes/dbh.class.php";
+           $dbs = new Dbh();
+          $productsSql= $dbs->connect()->prepare('SELECT *FROM product;');
+           if($productsSql->execute()){
+                $productsArray = $productsSql->fetchAll(PDO::FETCH_ASSOC);
+            }
+            foreach ($productsArray as $product) {
+                $path = $dir.$product['image_file_name'];
+                    echo "<article class='card'>";
+                    echo  "<div class='image-section img-styling' style=\"background-image:url('Images/{$product['image_file_name']}')\"></div>";
+                    echo "<div class='content'>";
+                    echo "<h2 class='product-title'>{$product['product_name']}</h2>";
+                    echo " <h3 class='product-price'>{$product['product_price']}</h3>";
+                    echo "<p class='product-description'>{$product['product_description']}</p>";
+                    echo " <a href='' class=''>Add to Cart</a>";
+                    echo "</div>";
+                    echo "</article>";
+                }
+        ?>
     <article class="card">
         <div class="image-section img-one">
-             </div>
+        </div>
             <div class="content">
                 <h2 class="product-title">Title One</h2>
                 <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-two"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-    <article class="card">
-        <div class="image-section img-three"></div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
+                <p class="product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
                 <a href="" class="button">Add to Cart</a>
             </div>
     </article>

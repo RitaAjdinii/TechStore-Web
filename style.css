@@ -502,29 +502,14 @@ background-color: #4E6E81;
     min-height: 250px;
 }
 
-.card .img-one{
-    background-image: url("Images/HomeImageBorderlands.webp");
+.card .img-styling{
+   /* background-image: url("Images/HomeImageBorderlands.webp");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
 }
 
-.card .img-two{
-    background-image: url("Images/HomeImageBorderlands.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-}
-
-.card .img-three{
-    background-image: url("Images/HomeImageBorderlands.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    
-}
 
 .card .content{
     text-align: center;
