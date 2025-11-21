@@ -33,51 +33,13 @@
                     echo "</article>";
                 }
         ?>
-    <article class="card">
-        <div class="image-section img-one">
-        </div>
-            <div class="content">
-                <h2 class="product-title">Title One</h2>
-                <h3 class="product-price">1800</h3>
-                <p class="product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, doloribus laborum? Laudantium, placeat accusamus quaerat vero illo voluptatem temporibus. Quaerat.</p>
-                <a href="" class="button">Add to Cart</a>
-            </div>
-    </article>
-
 
 
     </section>
 
 
     </main>
-
-
-
-     <footer class="footer">
-        <ul class="footer-page-list">
-            <li>
-                <a>Home</a>
-            </li>
-            <li>
-                <a>Products</a>
-            </li>
-            <li>
-                <a>Contact Us</a>
-            </li>
-            <li>
-                <a>About Us</a>
-            </li>
-            <li>
-                <a>Cart</a>
-            </li>
-            <li>
-                <a>Login</a>
-            </li>
-        </ul>
-        <ul class="footer-social-list">
-            
-        </ul>
-    </footer>
+    <?php include "footer.php"?>
     <script src="navbar.js">
     </script>
       

@@ -18,7 +18,7 @@ flex-direction: column;
 
 main{
     height:100%;
-    padding-top:5%;
+    padding-top:7%;
 }
 
 
@@ -31,7 +31,7 @@ nav{
     height: auto;
     position:sticky;
     top:0.5px;
-    background-color:transparent;
+    background-color:#4E6E81;
     height:100px;
     width:100%;
 }
@@ -41,18 +41,18 @@ nav a{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color:#F9DBBB;
     font-size: 20px;
     font-weight:500;
     font-family: Arial, Helvetica, sans-serif;
     height:100%;
     width:120px;
-    color: #2E3840;
 }
 
 nav .logo{
     text-shadow: 3px 3px #FF0303;
     font-size:30px;
+    color: white;
 }
 
 .logo{
@@ -85,7 +85,7 @@ nav .logo{
 
 .nav-item:hover{
 
-    border-bottom:2px solid #2E3840;
+    border-bottom:2px solid #F9DBBB;
 }
 
 
