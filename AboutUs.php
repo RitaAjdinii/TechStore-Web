@@ -13,7 +13,7 @@
             <div class="about-us-container">
                 <div class="about-us-content-section">
                     <div class="about-us-title">
-                          <h1>ABOUT <a href="">TEKK</a></h1>
+                          <h1 id="big-aboutus-h1">ABOUT <a href="">TEKK</a></h1>
                     </div>
                 </div>
                 <div class="about-us-content">
@@ -28,8 +28,32 @@
                  <div class="about-image-section">
                     <img src="Images/accolades-pc.jpg" alt="">
                  </div>
+            </div> 
+            <article class="about-article">
+                <div class="about-article-content">
+                    <h2 class="article-h2">This is an article</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
+                </div>
+                <div class="about-article-image" style="background-image: url('Images/Lenovo IdeaCentre AIO 3i, All-in-One Desktop.webp')">
+                 </div>
+            </article>
+             <article class="about-article">
+                <div class="about-article-content">
+                    <h2 class="article-h2">This is an article</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
+                </div>
+                <div class="about-article-image" style="background-image: url('Images/HomeImageEsports.webp');">
+                 </div>
+            </article>
+             <article class="about-article">
+                <div class="about-article-content">
+                    <h2 class="article-h2">This is an article</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
+                </div>
+                <div class="about-article-image" style="background-image: url('Images/RazerNexus.webp');">
+                 </div>
+            </article>
 
-            </div>
         </div>
     </main>
    <?php include "footer.php";?>

@@ -26,7 +26,7 @@
                     echo  "<div class='image-section img-styling' style=\"background-image:url('Images/{$product['image_file_name']}')\"></div>";
                     echo "<div class='content'>";
                     echo "<h2 class='product-title'>{$product['product_name']}</h2>";
-                    echo " <h3 class='product-price'>{$product['product_price']}</h3>";
+                    echo " <h3 class='product-price'>{$product['product_price']}€</h3>";
                     echo "<p class='product-description'>{$product['product_description']}</p>";
                     echo " <a href='' class=''>Add to Cart</a>";
                     echo "</div>";

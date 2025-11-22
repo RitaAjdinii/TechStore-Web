@@ -11,14 +11,15 @@
 body{
 background-color: #F9DBBB;
 word-break: break-word;
-min-height:1000px;
 display: flex;
 flex-direction: column;
+min-height:100vh;
 }
 
 main{
     height:100%;
-    padding-top:7%;
+    padding-top:8%;
+    padding-bottom:10%;
 }
 
 
@@ -293,8 +294,8 @@ nav .logo{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:600px;
-    width: 100%;
+    height:100px;
+    width: auto;
     background-image:url("Images/HomeImageEsports.webp");
     background-repeat: none;
     background-position: center;
@@ -307,10 +308,82 @@ nav .logo{
 
 
 
+
+#big-aboutus-h1{
+     color: #FF0303;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-shadow: 6px 6px #2E3840;
+    font-size: 3em;
+    text-align: center;
+}
+
+.about-article {
+    display: flex;
+    flex-wrap: wrap;    
+    gap:20px;  
+    margin:5% 0;
+    max-width:80%;
+}
+
+.about-article:nth-of-type(even){
+    flex-direction: row-reverse;
+}
+
+
+
+.about-article:nth-of-type(n) .about-article-content{
+        background-color:#2e384044;
+        color: white;
+}
+
+
+
+.about-article:nth-of-type(3n) .about-article-content{
+        background-color:#ff030348;
+    
+}
+
+.about-article:nth-of-type(3n) .about-article-content h2{
+        color: #2E3840;
+    
+}
+
+.about-article:nth-of-type(2n) .about-article-content{
+        background-color:#ffa03a44;
+}
+
+
+
+.about-article-content {
+    flex: 1 1 300px;       
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.about-article-content h2{
+    font-size:35px;
+    color: #2E3840;
+}
+
+.about-article-image {
+    flex: 1 1 300px;      
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
 .about-us-section{
     width:100%;
     min-height:100vh;
    background-color: #F9DBBB;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 
@@ -339,32 +412,34 @@ nav .logo{
 .about-image-section img{
     width:100%;
     height:auto;
+    margin:0;
 }
 
-.about-us-title h1{
-    color: #FF0303;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight:bold;
-    text-shadow: 6px 6px #2E3840;
-    font-size: 3em;
-    text-align: center;
-}
+
 .about-us-content-section .about-us-title {
     text-transform: uppercase;
     font-size:30px;/*change to 1.2 when on mobile query*/
     color:#2E3840;
 }
 
-@media(max-width:750px){
+@media(max-width:800px){
     .about-us-content-section .about-us-title{
         font-size:20px;
     }
-    .about-us-title h1{
-         text-shadow: 3px 3px #2E3840;
-    }
+   
     .about-us-title h1 a{
-        text-shadow: 3px 3px #FF0303;
+        text-shadow: 2px 2px #FF0303;
     }
+
+    .about-article:nth-of-type(even){
+        flex-direction:column-reverse;
+    }
+    .about-article:nth-of-type(odd){
+        flex-direction: column;
+    }
+    
+
+   
 
 }
 
@@ -494,8 +569,9 @@ background-color: #4E6E81;
 }
 
 .product-cards-container .card{
-    outline:1px solid #F9DBBB;
+    outline:1px solid #f9dbbb3f;
     color:white;
+    box-shadow: -10px 0px 50px 9px #2E3840;
 }
 
 .image-section{
