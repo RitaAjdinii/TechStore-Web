@@ -420,6 +420,7 @@ nav .logo{
     text-transform: uppercase;
     font-size:30px;/*change to 1.2 when on mobile query*/
     color:#2E3840;
+
 }
 
 @media(max-width:800px){
@@ -431,13 +432,6 @@ nav .logo{
         text-shadow: 2px 2px #FF0303;
     }
 
-    .about-article:nth-of-type(even){
-        flex-direction:column-reverse;
-    }
-    .about-article:nth-of-type(odd){
-        flex-direction: column;
-    }
-    
 
    
 
@@ -547,6 +541,66 @@ nav .logo{
 
 }
 
+/**CONTACT US PAGE**/
+
+.contact-us-section{
+
+    height:100vh;
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+
+
+
+.contact-us-container{
+    max-width: 600px;
+    margin:75px auto;
+}
+
+.contact-us-container h2{
+    font-size: 50px;
+    margin-bottom: 30px;  
+    color:#2E3840;
+}
+
+.contact-form input,.contact-form textarea{
+    width:100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border:1px solid grey;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.48);
+    color: grey;
+    font-size: 16px;
+}
+
+.contact-form textarea{
+    height:120px;
+}
+
+.contact-form button{
+    font-size: 16px;
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:#4E6E81;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3 ease;
+    color: white;
+}
+
+.contact-form button:hover{
+    background-color:#FF0303;
+    box-shadow:3px 3px #2E3840;
+}
+
+
+
+
+/*------------------*/
 
 /*PRODUCTS PAGE*/
 .products-body{
@@ -679,10 +733,7 @@ form input:first-of-type{
     margin-bottom:20px;
 }
 
-form input:focus{
-    outline:1px solid #0eaf0e;
-    border:none;
-}
+
 
 #forgor{
     width: 90%;
