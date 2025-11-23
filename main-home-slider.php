@@ -1,10 +1,9 @@
 
 <div id="main-slider">
-        <h1 class="main-slider-h1">MEET THE ALL-NEW RAZER-BLADE 16</h1>
-        <p>SLIMMER.SMARTER.SHARPER</p>
+        <h1 class="main-slider-h1">THIS IS SOME RANDOM TEXT ABOUT THE WEBSITE</h1>
         <div class="spanz">
-            <a href="" >Learn more<span class="green">></span></a>
-            <a href="" >Notify me<span class="green">></span></a>
+            <a href=""  class="home-slider-span">Learn more<span class="arrow">></span></a>
+            <a href="" class="home-slider-span" >Notify me<span class="arrow">></span></a>
         </div>
         <div class="controls">
             <button id ="left"><img src="Images/arrow_back_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>

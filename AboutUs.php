@@ -29,28 +29,28 @@
                     <img src="Images/accolades-pc.jpg" alt="">
                  </div>
             </div> 
-            <article class="about-article">
-                <div class="about-article-content">
+            <article class="article">
+                <div class="article-content">
                     <h2 class="article-h2">This is an article</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
                 </div>
-                <div class="about-article-image" style="background-image: url('Images/Lenovo IdeaCentre AIO 3i, All-in-One Desktop.webp')">
+                <div class="article-image" style="background-image: url('Images/Lenovo IdeaCentre AIO 3i, All-in-One Desktop.webp')">
                  </div>
             </article>
-             <article class="about-article">
-                <div class="about-article-content">
+             <article class="article">
+                <div class="article-content">
                     <h2 class="article-h2">This is an article</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
                 </div>
-                <div class="about-article-image" style="background-image: url('Images/HomeImageEsports.webp');">
+                <div class="article-image" style="background-image: url('Images/HomeImageEsports.webp');">
                  </div>
             </article>
-             <article class="about-article">
-                <div class="about-article-content">
+             <article class="article">
+                <div class="article-content">
                     <h2 class="article-h2">This is an article</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
                 </div>
-                <div class="about-article-image" style="background-image: url('Images/RazerNexus.webp');">
+                <div class="article-image" style="background-image: url('Images/RazerNexus.webp');">
                  </div>
             </article>
 
