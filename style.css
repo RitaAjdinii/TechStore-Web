@@ -357,7 +357,7 @@ nav .logo{
 }
 
 
-.home-article {
+.home-article{
     display: flex;
     flex-wrap: wrap;    
     gap:20px;  
@@ -367,43 +367,8 @@ nav .logo{
 }
 
 
-.home-article:nth-of-type(even){
-    flex-direction: row-reverse;
-}
 
 
-
-.home-article:nth-of-type(n) .article-content{
-        background-color:#2e384044;
-        color: white;
-}
-
-
-
-.home-article:nth-of-type(3n) .article-content{
-        background-color:#ff030348;
-    
-}
-
-.home-article:nth-of-type(3n) .article-content h2{
-        color: #2E3840;
-    
-}
-
-.home-article:nth-of-type(2n) .article-content{
-        background-color:#ffa03a44;
-}
-
-
-
-.home-article-content {
-    flex: 1 1 300px;       
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-}
 .home-article-content h2{
     font-size:35px;
     color: #2E3840;
@@ -416,6 +381,8 @@ nav .logo{
     background-size: cover;
     background-position: center;
 }
+
+
 
 /*about-us-page-styling**/
 

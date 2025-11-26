@@ -9,7 +9,8 @@
         <ul class="nav-content">
             <li>Users Info</li>
             <li>Admin profile</li> 
-            <li>Home Page edit</li>
+            <li><a href="home-page-add.php">Home page add</a></li>
+             <li><a href="home-page-article-table.php">Home page table</a></li>
             <li>Contact Us edit</li>
             <li><a href="product-add.php">Products Add</a></li>
             <li><a href="products-table.php">Products Table</a></li>
