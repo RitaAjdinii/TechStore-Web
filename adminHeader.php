@@ -10,11 +10,12 @@
             <li>Users Info</li>
             <li>Admin profile</li> 
             <li><a href="home-page-add.php">Home page add</a></li>
-             <li><a href="home-page-article-table.php">Home page table</a></li>
+            <li><a href="home-page-article-table.php">Home page table</a></li>
             <li>Contact Us edit</li>
             <li><a href="product-add.php">Products Add</a></li>
             <li><a href="products-table.php">Products Table</a></li>
-            <li><a href="about-us-admin.php">About Us</a></li>
+            <li><a href="aboutus-add-info.php">Add about info</a></li>
+            <li><a href="aboutus-info-table.php">About us info table</a></li>
             <li>Login Edit</li>
             <li>Signup Edit</li>
             <li>Add Pages++</li>

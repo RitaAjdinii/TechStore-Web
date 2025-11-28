@@ -10,7 +10,7 @@ class ProductContr extends Product{
 
     public function  __construct($imageFileName,$imageFilePath,$name,$description,$price){
         $this->imageFileName = $imageFileName;
-         $this->imageFilePath = $imageFilePath;
+        $this->imageFilePath = $imageFilePath;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
