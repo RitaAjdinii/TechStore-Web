@@ -12,11 +12,11 @@
         <section class="contact-us-section">
             <div class="contact-us-container">
                 <h2>Contact Us</h2>
-                <form action="" class="contact-form">
-                    <input type="text" placeholder="Your Name" >
-                    <input type="email" placeholder="Your email">
-                    <textarea  name="send-message" id="">Send Message</textarea>
-                    <button type="submit">Submit</button>
+                <form action="includes/contact-us.inc.php" class="contact-form" method="post">
+                    <input type="text" placeholder="Your Name" name="name">
+                    <input type="text" placeholder="Your email" name="email">
+                    <textarea id="" name="message" placeholder="Send message"></textarea>
+                    <button type="submit" name="submit">Submit</button>
                 </form>
             </div>
         </section>
