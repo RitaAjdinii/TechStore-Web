@@ -17,13 +17,14 @@
                 <th>ID:</th>
                 <th>Article Title:</th>
                 <th>Article Paragraph:</th>
+                <th>Is Slider:</th>
                 <th>Image name:</th>
                 <th>Image path:</th>
             </tr>
         </thead>
     <tbody>
         <?php
-         include "classes/dbh.class.php";
+         require_once "classes/dbh.class.php";
         $dbs = new Dbh();
         $articleSql = $dbs->connect()->prepare("SELECT * FROM home_page_article;");
         if($articleSql->execute()){
@@ -37,6 +38,7 @@
                     echo "<td class='product'>{$article['home_article_id']}</td>";
                     echo "<td class='product'>{$article['home_article_title']}</td>";
                     echo "<td class='product'>{$article['home_article_paragraph']}</td>";
+                    echo "<td class='product'>{$article['home_is_slider']}</td>";
                      echo "<td class='product'>{$article['home_article_image_name']}</td>";
                      echo "<td class='product'>{$article['home_article_image_path']}</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
@@ -47,7 +49,6 @@
                           </td>";
                     echo "</tr>";
         }
-
         ?>
     </tbody>
     </table>

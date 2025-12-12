@@ -1,6 +1,26 @@
+<?php
+require_once "classes/dbh.class.php";
+
+$dbs = new Dbh();
+
+$sql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=1');
+
+if($sql->execute()){
+    $slider = $sql->fetch(PDO::FETCH_ASSOC);
+    $mainTitle = $slider['home_article_title'];
+    $mainParagraph = $slider['home_article_paragraph'];
+
+}
+
+
+
+
+?>
+
 
 <div id="main-slider">
-        <h1 class="main-slider-h1">THIS IS SOME RANDOM TEXT ABOUT THE WEBSITE</h1>
+        <h1 class="main-slider-h1"><?php echo $mainTitle;?></h1>
+        <p class="slider-paragraph"><?php echo $mainParagraph?></p>
         <div class="spanz">
             <a href=""  class="home-slider-span">Learn more<span class="arrow">></span></a>
             <a href="" class="home-slider-span" >Notify me<span class="arrow">></span></a>

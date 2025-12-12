@@ -12,12 +12,14 @@
     <form action="includes/home-article.inc.php" method="post" enctype="multipart/form-data">
             <label >Choose image:</label>
              <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="article-image"><br>
-        <label>Article title:</label>
-        <input type="text" name="article-title"><br>
-        <label>Article text content</label>
-        <textarea  name="article-paragraph"></textarea>
-        <button type="submit" name="submit">Create home article</button>
-        <button><a href="../AdminDashboard.php">Cancel</a></button>
+             <label for="">Is Slider</label>
+             <input type="checkbox" name="is_slider"><br>
+            <label>Article title:</label>
+            <input type="text" name="article-title"><br>
+            <label>Article text content</label>
+            <textarea  name="article-paragraph"></textarea>
+            <button type="submit" name="submit">Create home article</button>
+              <button><a href="../AdminDashboard.php">Cancel</a></button>
     </form> 
     <script src="admin-navbar.js"></script>
 </body>

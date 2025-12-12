@@ -294,6 +294,15 @@ nav .logo{
 
 
 
+.slider-paragraph{
+    color: white;
+    font-size:23px;
+     font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-shadow: 2px 2px black;
+    min-width:200px;
+    padding:5px;
+}
 
 
 #create-id,#create-acc{
