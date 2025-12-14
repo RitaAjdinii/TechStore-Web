@@ -10,8 +10,36 @@ session_start()
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 <body>
+    <?php
+    include "classes/dbh.class.php";
+
+        $dbs = new Dbh();
+
+        $sliderSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=1');
+
+        if($sliderSql->execute()){
+            $slider = $sliderSql->fetch(PDO::FETCH_ASSOC);
+            $mainTitle = $slider['home_article_title'];
+            $mainParagraph = $slider['home_article_paragraph'];
+        }
+    ?>
     <?php include "header.php";?>
-    <?php include "main-home-slider.php";?>
+    
+<div id="main-slider">
+        <h1 class="main-slider-h1"><?php echo $mainTitle;?></h1>
+        <p class="slider-paragraph"><?php echo $mainParagraph?></p>
+        <div class="spanz">
+            <a href=""  class="home-slider-span">Learn more<span class="arrow">></span></a>
+            <a href="" class="home-slider-span" >Notify me<span class="arrow">></span></a>
+        </div>
+        <div class="controls">
+            <button id ="left"><img src="Images/arrow_back_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+            <button id="right"><img src="Images/arrow_forward_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"></button>
+        </div>
+
+    </div>
+</div>
+
     <main>
         <section class="home-content">
         <!--
@@ -26,13 +54,11 @@ session_start()
         -->
             <?php
         
-        include "classes/dbh.class.php";
-
-        $dbs = new Dbh();
+        
 
         
 
-         $articleSql = $dbs->connect()->prepare('SELECT * FROM home_page_article;');
+         $articleSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=0;');
          if($articleSql->execute()){
             $articlesArray = $articleSql->fetchAll(PDO::FETCH_ASSOC);
          }
