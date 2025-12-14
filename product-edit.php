@@ -73,7 +73,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
         <textarea type="text" name="product-description" ><?php echo $productDescription?></textarea>
         <br>
         <label >Product price:</label>
-        <input  type="number"  name="product-price" min="0" step="0.1" value="<?php echo $productPrice?>"><br>
+        <input  type="number"  name="product-price" min="0" step="0.01" value="<?php echo $productPrice?>"><br>
         <button type="submit">Submit</button>
         <button><a href="AdminDashboard.php">Cancel</a></button>
     </form> 
