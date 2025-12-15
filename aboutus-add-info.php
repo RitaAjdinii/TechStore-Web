@@ -19,6 +19,8 @@
     <form action="includes/aboutus-info.inc.php" method="post" enctype="multipart/form-data">
             <label >Choose image:</label>
             <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="image"><br>
+            <label for="">Is Info</label>
+             <input type="checkbox" name="is_info"><br>
             <label>About us  main title:</label>
             <input type="text" name="main-title"><br>
             <label>About us info title:</label>

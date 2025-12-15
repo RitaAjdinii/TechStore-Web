@@ -18,6 +18,7 @@
                 <th>Main Title:</th>
                 <th>Title:</th>
                 <th>Info Text:</th>
+                <th>Is Info article:</th>
                 <th>Image name:</th>
                 <th>Image path:</th>
             </tr>
@@ -39,6 +40,7 @@
                     echo "<td class='product'>{$info['about_us_main_title']}</td>";
                     echo "<td class='product'>{$info['about_us_title']}</td>";
                     echo "<td class='product'>{$info['about_us_text']}</td>";
+                     echo "<td class='product'>{$info['isInfo']}</td>";
                      echo "<td class='product'>{$info['image_file_name']}</td>";
                      echo "<td class='product'>{$info['image_file_path']}</td>";
                     echo "<td class='btn-controls' id='edit-btn'>

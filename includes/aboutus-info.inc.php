@@ -1,5 +1,6 @@
 <?php
 
+$isInfo;
 if(isset($_POST["submit"])){
 
     $aboutUsMainTitle= $_POST['main-title'];
@@ -8,14 +9,21 @@ if(isset($_POST["submit"])){
     $image = $_FILES['image'];
     $imageFileName = basename($_FILES['image']["name"]);
     $imageFilePath = "../images".$imageFileName;
+     if($_POST['is_info']==null){
+        $isInfo = 0;
+     }else{
+        $isInfo = 1;
+     }
+
+
 
     include "../classes/dbh.class.php";
     include "../classes/aboutus-info.class.php";
     include "../classes/aboutus-info-contr.php";
 
-    $aboutInfo = new AboutUsInfoContr($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath);
+    $aboutInfo = new AboutUsInfoContr($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo);
     $aboutInfo->createAboutInfo();
-     header("location:../product-add.php?error=none");
+     header("location:../aboutus-add.php?error=none");
      echo "<h1>Congrats.your data has been submited!!!</h1>";
 
 
