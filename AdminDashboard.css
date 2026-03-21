@@ -1,113 +1,100 @@
 :where(*) {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-nav{
-    background-color:white;
-    border-bottom:1px solid black;
-    height:100px;
+nav {
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 100px;
 }
 
-.nav-list{
+.nav-list {
 }
-.logo{
-    position: fixed;
+.logo {
+  position: fixed;
 }
-.hamburger{
-    height:30px;
-    width:30px;
-    cursor: pointer;
-    transition:rotate 100ms;
-    justify-self: flex-start;
-    margin-right:1200px;
-    margin:10px;
-  
-}
-
-.hamburger .line{
-    height:4px;
-    background-color:black;
-    width:20px;
-    margin-top:5px;
-    cursor: pointer;
+.hamburger {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  transition: rotate 100ms;
+  justify-self: flex-start;
+  margin-right: 1200px;
+  margin: 10px;
 }
 
-.nav-content{
-    display: none;
+.hamburger .line {
+  height: 4px;
+  background-color: black;
+  width: 20px;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
-
-
-.nav-content li{
-    list-style-type: none;
-    color: black;
-    font-size:25px;
-    background-color: grey;
-    border: 1px solid black;
-    padding:5px;
-    cursor: pointer;
-
+.nav-content {
+  display: none;
 }
 
-.nav-content li:hover{
-    background-color: white;
-
+.nav-content li {
+  list-style-type: none;
+  color: black;
+  font-size: 25px;
+  background-color: grey;
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
 }
 
-
-.toggle-hamburger{
-    margin-left:30%;
-    rotate:90deg;
-    
+.nav-content li:hover {
+  background-color: white;
 }
 
-.toggle-sidebar{
-    display: block;
-    width:33%;
-    position: absolute;
-    height:100vh;
-    background-color: white;
-    border: 1px solid black;
+.toggle-hamburger {
+  margin-left: 30%;
+  rotate: 90deg;
 }
 
-.paragraph{
-    background-color: green;
+.toggle-sidebar {
+  display: block;
+  width: 33%;
+  position: absolute;
+  height: 100vh;
+  background-color: white;
+  border: 1px solid black;
 }
 
-th{
-    padding:1rem;
-    background-color: transparent;
+.paragraph {
+  background-color: green;
 }
 
-tr{
-    
+th {
+  padding: 1rem;
+  background-color: transparent;
 }
 
-.user,.product{
-    padding: 1rem;
-    background-color: rgba(142, 142, 142, 0.605);
+tr {
 }
 
-
-.btn-controls{
-    background-color: transparent;
-    font-weight:bold;
-    font-size:15px;
-    padding:20px;
-    
+.user,
+.product {
+  padding: 1rem;
+  background-color: rgba(142, 142, 142, 0.605);
 }
 
-#edit-btn:hover{
-    background-color: rgb(105, 209, 105);
+.btn-controls {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 20px;
 }
 
-
-
-#delete-btn:hover{
-    background-color: rgb(251, 67, 67);
+#edit-btn:hover {
+  background-color: rgb(105, 209, 105);
 }
 
-
+#delete-btn:hover {
+  background-color: rgb(251, 67, 67);
+}
