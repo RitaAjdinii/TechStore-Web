@@ -16,18 +16,41 @@ session_start()
         $dbs = new Dbh();
 
         $sliderSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=1');
-
+        $slider= [];
         if($sliderSql->execute()){
-            $slider = $sliderSql->fetch(PDO::FETCH_ASSOC);
-            $mainTitle = $slider['home_article_title'];
-            $mainParagraph = $slider['home_article_paragraph'];
+            $slider = $sliderSql->fetchAll(PDO::FETCH_ASSOC);
         }
     ?>
-    <?php include "header.php";?>
+                    <nav>
+                        <ul class="nav-list">
+                        <div class="hamburger-menu">
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                        </div>
+                            <li class="nav-item"><a href="logo" class="logo">TEKK</a></li>
+                            <li class="nav-item"><a  href="Home.php">Home</a></li>
+                            <li class="nav-item"><a href="Producs.php">Products</a></li>
+                            <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
+                            <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
+                            <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
+                            <li class="nav-item"><a href="Login.php">Sign up</a></li>
+                        </ul>
+                        <div class="click-menu-addition">
+                        <ul class="nav-edited">
+                            <li class="item-edited"><a  href="Home.php">Home</a></li>
+                            <li class="item-edited"><a href="Producs.php">Products</a></li>
+                            <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
+                            <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
+                            <li class="item-edited"><a href="/Cart">Cart</a></li>
+                            <li class="item-edited"><a href="Login.php">Sign up</a></li>
+                        </ul>
+                        </div>
+                    </nav>
     
 <div id="main-slider">
-        <h1 class="main-slider-h1"><?php echo $mainTitle;?></h1>
-        <p class="slider-paragraph"><?php echo $mainParagraph?></p>
+        <h1 class="main-slider-h1"></h1>
+        <p class="slider-paragraph"></p>
         <div class="spanz">
             <a href=""  class="home-slider-span">Learn more<span class="arrow">></span></a>
             <a href="" class="home-slider-span" >Notify me<span class="arrow">></span></a>
@@ -80,7 +103,56 @@ session_start()
         </section>
     </main>
     <?php include "footer.php";?>
-     <script src="main-home-slider.js"></script>
+    <script>
+        const leftBtn = document.querySelector("#left");
+        const rightBtn = document.querySelector("#right");
+        const mainSlider = document.querySelector("#main-slider");
+        let slider =<?php echo json_encode($slider); ?>;
+        let index =0;
+        let sliderTitle = document.querySelector('.main-slider-h1');
+        let sliderParagraph = document.querySelector('.slider-paragraph');
+        let sliderBackgroundImg;
+       
+        console.log(slider);
+        leftBtn.addEventListener("click",()=>{
+             index -=1;
+            if(index<0){
+                index = slider.length-1;
+            }
+
+           sliderTitle.textContent=articleTitle= slider[index].home_article_title;
+            sliderParagraph.textContent=articleParagraph= slider[index].home_article_paragraph;
+            sliderBackgroundImg = slider[index].home_article_image_path;
+            mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
+         
+        
+           
+        });
+
+
+        rightBtn.addEventListener("click",()=>{
+            
+            index +=1;
+            if(index>slider.length-1){
+                index = 0;
+            }
+             sliderTitle.textContent=articleTitle= slider[index].home_article_title;
+            sliderParagraph.textContent=articleParagraph= slider[index].home_article_paragraph;
+            sliderBackgroundImg = slider[index].home_article_image_path;
+            mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
+        });
+
+
+        document.addEventListener("DOMContentLoaded",()=>{
+               sliderTitle.textContent=articleTitle= slider[0].home_article_title;
+            sliderParagraph.textContent=articleParagraph= slider[0].home_article_paragraph;
+            sliderBackgroundImg = slider[0].home_article_image_path;
+            mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
+
+        });
+
+
+    </script>
      <script src="navbar.js"></script>
 </body>
 </html>

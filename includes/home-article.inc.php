@@ -13,7 +13,7 @@ if(isset($_POST["submit"])){
      }
 
 
-     $targetDirectory = "../images/";
+     $targetDirectory = "images/";
      $imageFileName = basename($_FILES["article-image"]["name"]);
      $imageFilePath = $targetDirectory.$imageFileName;
      
