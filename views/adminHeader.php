@@ -22,4 +22,5 @@
             <form action="includes/logout.inc.php" method="POST"><li><button type=submit>Logout</button></li></form>
         </ul>
 
+        <script src="../styles/admin-navbar.js"> </script>
 </nav>

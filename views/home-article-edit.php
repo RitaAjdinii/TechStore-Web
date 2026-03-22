@@ -81,7 +81,5 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
         <button type="submit">Submit</button>
         <button><a href="AdminDashboard.php">Cancel</a></button>
     </form> 
-
-    <script src="admin-navbar.js"></script>
 </body>
 </html>

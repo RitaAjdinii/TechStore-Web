@@ -56,6 +56,7 @@
                     echo "<p class='product-description'>{$product['product_description']}</p>";
                     echo " <a href='' class=''>Add to Cart</a>";
                     echo "</div>";
+                    
                     echo "</article>";
                 }
         ?>

@@ -49,11 +49,5 @@
     </tbody>
     </table>
 </main>
-
-
-
-
-     <script src="admin-navbar.js">
-     </script>
 </body>
 </html>

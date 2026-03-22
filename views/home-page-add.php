@@ -21,6 +21,5 @@
             <button type="submit" name="submit">Create home article</button>
               <button><a href="../AdminDashboard.php">Cancel</a></button>
     </form> 
-    <script src="admin-navbar.js"></script>
 </body>
 </html>

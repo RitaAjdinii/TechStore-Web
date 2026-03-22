@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products Table</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
     <?php include "adminHeader.php";?>
@@ -22,14 +22,11 @@
         </thead>
     <tbody>
         <?php
-         include "classes/dbh.class.php";
-        $dbs = new Dbh();
-        $productSql = $dbs->connect()->prepare("SELECT * FROM product;");
-        if($productSql->execute()){
-            $productsArray=$productSql->fetchAll(PDO::FETCH_ASSOC);
-        }
+        require_once "../controllers/product-contr.php";
 
+        $productController = new ProductContr();
 
+        $productsArray = $productController->getAll();
 
         foreach($productsArray as $product){
             echo "<tr>";
@@ -47,16 +44,9 @@
                           </td>";
                     echo "</tr>";
         }
-
         ?>
     </tbody>
     </table>
 </main>
-
-
-
-
-     <script src="admin-navbar.js">
-     </script>
 </body>
 </html>
