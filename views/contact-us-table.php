@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us Table</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
     <?php include "adminHeader.php";?>
@@ -22,27 +22,23 @@
         </thead>
     <tbody>
         <?php
-         include "classes/dbh.class.php";
-        $dbs = new Dbh();
-        $contactSql = $dbs->connect()->prepare("SELECT * FROM contact_us;");
-        if($contactSql->execute()){
-            $contactsArray=$contactSql->fetchAll(PDO::FETCH_ASSOC);
-        }
+
+          require_once "../controllers/contact-us-contr.php";
+        $contact = new ContactUsContr();
+
+        $contactsArray = $contact->getAll();
 
 
 
         foreach($contactsArray as $contact){
             echo "<tr>";
-                    echo "<td class='product'>{$contact['contact_id']}</td>";
-                    echo "<td class='product'>{$contact['contact_name']}</td>";
-                    echo "<td class='product'>{$contact['contact_message']}</td>";
-                    echo "<td class='btn-controls' id='edit-btn'>
-                            <a href='contact-us-edit.php?id=$contact[contact_id]'>Edit</a>
-                          </td>";
-                    echo "<td class='btn-controls'  id='delete-btn'> 
-                             <a href='contact-us-delete.php?id=$contact[contact_id]' >Delete</a> 
-                          </td>";
-                    echo "</tr>";
+            echo "<td class='product'>{$contact['contact_id']}</td>";
+            echo "<td class='product'>{$contact['contact_name']}</td>";
+            echo "<td class='product'>{$contact['contact_message']}</td>";
+            echo "<td class='btn-controls'  id='delete-btn'> 
+                      <a href='contact-us-delete.php?id=$contact[contact_id]'>Delete</a> 
+                  </td>";
+             echo "</tr>";
         }
 
         ?>

@@ -11,7 +11,7 @@
             <li>Admin profile</li> 
             <li><a href="home-page-add.php">Home page add</a></li>
             <li><a href="home-page-article-table.php">Home page table</a></li>
-            <li>Contact Us edit</li>
+            <li><a href="contact-us-table.php">Contact Us Table</a></li>
             <li><a href="product-add.php">Products Add</a></li>
             <li><a href="products-table.php">Products Table</a></li>
             <li><a href="aboutus-add-info.php">Add about info</a></li>
