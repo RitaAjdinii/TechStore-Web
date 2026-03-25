@@ -8,10 +8,10 @@ session_start()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 <body>
     <?php
-    include "classes/dbh.class.php";
+    include "../classes/dbh.class.php";
 
         $dbs = new Dbh();
 
@@ -56,8 +56,8 @@ session_start()
             <a href="" class="home-slider-span" >Notify me<span class="arrow">></span></a>
         </div>
         <div class="controls">
-            <button id ="left"><img src="Images/arrow_back_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
-            <button id="right"><img src="Images/arrow_forward_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"></button>
+            <button id ="left"><img src="../Images/arrow_back_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg" alt=""></button>
+            <button id="right"><img src="../Images/arrow_forward_ios_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"></button>
         </div>
 
     </div>
@@ -153,7 +153,7 @@ session_start()
 
 
     </script>
-     <script src="navbar.js"></script>
+     <script src="../styles/navbar.js"></script>
 </body>
 </html>
 

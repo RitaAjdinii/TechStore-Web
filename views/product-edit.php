@@ -11,9 +11,6 @@
         require_once "../controllers/product-contr.php";
 
         $product = new ProductContr();
-
-        $errorMessage="";
-        $successMessage="";
         $targetDirectory ="images/";
 
         $productId = $_GET["id"];

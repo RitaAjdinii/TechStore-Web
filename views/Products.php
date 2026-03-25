@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body class="products-body">
     <nav>
@@ -38,18 +38,14 @@
 
     <section class="product-cards-container">
         <?php
+        require_once "../controllers/product-contr.php";
 
-        $dir = "Images//";
-          include "classes/dbh.class.php";
-           $dbs = new Dbh();
-          $productsSql= $dbs->connect()->prepare('SELECT *FROM product;');
-           if($productsSql->execute()){
-                $productsArray = $productsSql->fetchAll(PDO::FETCH_ASSOC);
-            }
+        $products = new ProductContr();
+        $productsArray = $products->getAll();
             foreach ($productsArray as $product) {
-                $path = $dir.$product['image_file_name'];
+               
                     echo "<article class='card'>";
-                    echo  "<div class='image-section img-styling' style=\"background-image:url('Images/{$product['image_file_name']}')\"></div>";
+                    echo  "<div class='image-section img-styling' style=\"background-image:url('../Images/{$product['image_file_name']}')\"></div>";
                     echo "<div class='content'>";
                     echo "<h2 class='product-title'>{$product['product_name']}</h2>";
                     echo " <h3 class='product-price'>{$product['product_price']}€</h3>";

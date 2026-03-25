@@ -1,19 +1,12 @@
 <?php
 
 
-include "classes/dbh.class.php";
+require_once "../controllers/aboutus-contr.php";
 
+$about= new AboutUsContr();
 
-$dbs = new Dbh();
-$connection = $dbs->connect();
 if(isset($_GET["id"])){
-
     $id=$_GET["id"];
-    $sql = "DELETE FROM about_us_info WHERE about_us_info_id=$id";
-   $result =  $connection->prepare($sql);
-    if($result->execute()){
-        echo "<h1>Item deleted!!!</h1>";
-    exit();
-    }
+    $about->delete($id);
 }
 

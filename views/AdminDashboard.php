@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin-Dashboard</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
      <?php include "adminHeader.php";?>
@@ -24,13 +24,11 @@
             </thead>
             <tbody>
             <?php
-                include "classes/dbh.class.php";
-                $dbs = new Dbh();
-                $usersSql= $dbs->connect()->prepare('SELECT*FROM user;');
-                
-                if($usersSql->execute()){
+/*
+ * 
+ *   if($usersSql->execute()){
                     $usersArray = $usersSql->fetchAll(PDO::FETCH_ASSOC);
-                }
+                 
                     foreach ($usersArray as $user) {
                         echo "<tr>";
                         echo "<td class='user'>{$user['user_id']}</td>";
@@ -47,7 +45,11 @@
                         <a href='classes/delete.php?id=$user[user_id]' >Delete</a> 
                             </td>";
                         echo "</tr>";
-                    }
+                    
+ * 
+ */
+                
+    
                 ?>
                 
             </tbody>
