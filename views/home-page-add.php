@@ -1,3 +1,38 @@
+<?php
+
+
+if(isset($_POST["submit"])){
+
+
+    $home_article_title = $_POST['article-title'];
+     $home_article_paragraph = $_POST['article-paragraph'];
+     $image =$_FILES['article-image'];
+     if($_POST['is_slider']==null){
+        $isSlider = 0;
+     }else{
+        $isSlider = 1;
+     }
+
+
+     $targetDirectory = "images/";
+     $imageFileName = basename($_FILES["article-image"]["name"]);
+     $imageFilePath = $targetDirectory.$imageFileName;
+     
+    include "../classes/dbh.class.php";
+    include "../classes/home-article.class.php";
+    include "../classes/home-article-contr.php";
+
+    $homeArticle= new HomeArticleContr($imageFileName,$imageFilePath,$home_article_title,$home_article_paragraph,$isSlider);
+    $homeArticle->createHomeArticle();
+       header("location:../home-page-add.php?error=none");
+       echo "<h1>Congrats.your data has been submited!!!</h1>";
+
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +44,7 @@
 <body>
     <?php include "adminHeader.php"?>
     <h1>Create home article</h1>
-    <form action="includes/home-article.inc.php" method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data">
             <label >Choose image:</label>
              <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="article-image"><br>
              <label for="">Is Slider</label>

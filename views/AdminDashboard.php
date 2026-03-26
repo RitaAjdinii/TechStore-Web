@@ -24,6 +24,10 @@
             </thead>
             <tbody>
             <?php
+
+            require_once("../controllers/home-article-contr.php");
+
+            
 /*
  * 
  *   if($usersSql->execute()){

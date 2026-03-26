@@ -1,8 +1,10 @@
 <?php
 
-include "classes/dbh.class.php";
+require_once('../controllers/home-article-contr.php');
 
-$dbs = new Dbh();
+
+$home = new HomeArticleContr();
+
 
 $homeArticleId ="";
 $imageFileName ="";
@@ -11,43 +13,30 @@ $articleTitle="";
 $articleParagraph="";
 
 $errorMessage="";
-$is_slider_value = 0;
+$isSlider = 0;
 $successMessage="";
-if(isset($_POST["isSlider"])){
-    $is_slider_value = 1;
-}else{
-    $is_slider_value = 0;
-}
-$targetDirectory ="images/";
 
-if($_SERVER["REQUEST_METHOD"]=="GET"){
-    $homeArticleId = $_GET["id"];
-    $sql = $dbs->connect()->prepare("SELECT * FROM home_page_article WHERE home_article_id=?;");
-     if($sql->execute(array($homeArticleId))){      
-       $row= $sql->fetch(PDO::FETCH_ASSOC);
-        $imageFileName = $row['home_article_image_name'];
-         $imageFilePath = $row['home_article_image_path'];
-        $articleTitle = $row['home_article_title'];
-        $articleParagraph= $row['home_article_paragraph'];
-        $isSlider = $row['home_is_slider'];
-    }
+
+
+$targetDirectory ="images/";
+$homeArticleId = $_GET["id"];
+$row=$home->get($homeArticleId);
+$imageFileName = $row['home_article_image_name'];
+$imageFilePath = $row['home_article_image_path'];
+$articleTitle = $row['home_article_title'];
+$articleParagraph= $row['home_article_paragraph'];
+$isSlider = $row['home_is_slider'];
+
+
+
+
     
-}else{
-    $homeArticleId = $_POST["article-id"];
+if($_SERVER["REQUEST_METHOD"]=="POST"){
     $imageFileName = basename($_FILES['article-image']["name"]);
     $imageFilePath = $targetDirectory.$imageFileName;
     $articleTitle = $_POST['article-title'];
     $articleParagraph = $_POST['article-paragraph'];
-    $isSlider = $is_slider_value;
-
-    if(empty($homeArticleId)||empty($imageFilePath) || empty($articleTitle) || empty($articleParagraph)){
-        echo "<h1>All fields are required!!!</h1>";
-    }else{
-        $sql = $dbs->connect()->prepare("UPDATE home_page_article SET home_article_image_name =?,home_article_image_path=?,home_article_title=?,home_article_paragraph=?,home_is_slider=? WHERE home_article_id =?;");
-        if($sql->execute(array($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$isSlider,$homeArticleId))){
-            echo "<h1>SQL executed successfully!!!</h1>";
-        }
-    }
+    $home->edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId);
 }
 
 
@@ -60,7 +49,7 @@ if($_SERVER["REQUEST_METHOD"]=="GET"){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
     <?php include "adminHeader.php";?>

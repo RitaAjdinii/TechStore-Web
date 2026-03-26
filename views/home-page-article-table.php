@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products Table</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
     <?php include "adminHeader.php";?>
@@ -23,15 +23,13 @@
             </tr>
         </thead>
     <tbody>
+
         <?php
-         require_once "classes/dbh.class.php";
-        $dbs = new Dbh();
-        $articleSql = $dbs->connect()->prepare("SELECT * FROM home_page_article;");
-        if($articleSql->execute()){
-            $articleArray=$articleSql->fetchAll(PDO::FETCH_ASSOC);
-        }
+        require_once("../controllers/home-article-contr.php");
+        $home = new HomeArticleContr();
 
-
+        $articleArray = $home->getAll();
+        
 
         foreach($articleArray as $article){
             echo "<tr>";
@@ -48,7 +46,7 @@
                              <a href='home-article-delete.php?id=$article[home_article_id]'>Delete</a> 
                           </td>";
                     echo "</tr>";
-        }
+        }       
         ?>
     </tbody>
     </table>

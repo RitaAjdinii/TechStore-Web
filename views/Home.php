@@ -11,42 +11,36 @@ session_start()
     <link rel="stylesheet" href="../styles/style.css">
 <body>
     <?php
-    include "../classes/dbh.class.php";
+       
 
-        $dbs = new Dbh();
 
-        $sliderSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=1');
-        $slider= [];
-        if($sliderSql->execute()){
-            $slider = $sliderSql->fetchAll(PDO::FETCH_ASSOC);
-        }
     ?>
-                    <nav>
-                        <ul class="nav-list">
-                        <div class="hamburger-menu">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
-                            <li class="nav-item"><a href="logo" class="logo">TEKK</a></li>
-                            <li class="nav-item"><a  href="Home.php">Home</a></li>
-                            <li class="nav-item"><a href="Producs.php">Products</a></li>
-                            <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
-                            <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
-                            <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
-                            <li class="nav-item"><a href="Login.php">Sign up</a></li>
-                        </ul>
-                        <div class="click-menu-addition">
-                        <ul class="nav-edited">
+        <nav>
+                <ul class="nav-list">
+            <div class="hamburger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+                <li class="nav-item"><a href="logo" class="logo">TEKK</a></li>
+                <li class="nav-item"><a  href="Home.php">Home</a></li>
+                <li class="nav-item"><a href="Producs.php">Products</a></li>
+                <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
+                <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
+                <li class="nav-item"><a href="/Cart"><img src="Images/cart.svg" alt=""></a></li>
+                <li class="nav-item"><a href="Login.php">Sign up</a></li>
+            </ul>
+                <div class="click-menu-addition">
+                    <ul class="nav-edited">
                             <li class="item-edited"><a  href="Home.php">Home</a></li>
                             <li class="item-edited"><a href="Producs.php">Products</a></li>
                             <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
                             <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
                             <li class="item-edited"><a href="/Cart">Cart</a></li>
                             <li class="item-edited"><a href="Login.php">Sign up</a></li>
-                        </ul>
-                        </div>
-                    </nav>
+                    </ul>
+                </div>
+    </nav>
     
 <div id="main-slider">
         <h1 class="main-slider-h1"></h1>
@@ -77,11 +71,8 @@ session_start()
         -->
             <?php
         
-        
-
-        
-
-         $articleSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=0;');
+    /*
+     * $articleSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=0;');
          if($articleSql->execute()){
             $articlesArray = $articleSql->fetchAll(PDO::FETCH_ASSOC);
          }
@@ -96,7 +87,12 @@ session_start()
                     echo "<div class='home-article-image' style=\"background-image:url('Images/{$article['home_article_image_name']}');\">";
                     echo "</div>";
                     echo "</article>";
-         }
+         } 
+     * 
+     * 
+     * 
+     * 
+     */
         ?>
 
 
