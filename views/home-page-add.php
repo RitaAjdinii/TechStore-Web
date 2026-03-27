@@ -2,29 +2,20 @@
 
 
 if(isset($_POST["submit"])){
-
-
+    require_once('../controllers/home-article-contr.php');
     $home_article_title = $_POST['article-title'];
      $home_article_paragraph = $_POST['article-paragraph'];
-     $image =$_FILES['article-image'];
-     if($_POST['is_slider']==null){
+      $image =$_FILES['article-image'];
+     if($_POST['isSlider']==null){
         $isSlider = 0;
      }else{
         $isSlider = 1;
      }
-
-
      $targetDirectory = "images/";
      $imageFileName = basename($_FILES["article-image"]["name"]);
      $imageFilePath = $targetDirectory.$imageFileName;
-     
-    include "../classes/dbh.class.php";
-    include "../classes/home-article.class.php";
-    include "../classes/home-article-contr.php";
-
-    $homeArticle= new HomeArticleContr($imageFileName,$imageFilePath,$home_article_title,$home_article_paragraph,$isSlider);
-    $homeArticle->createHomeArticle();
-       header("location:../home-page-add.php?error=none");
+    $home = new HomeArticleContr();
+    $home->create($imageFileName,$imageFilePath,$home_article_title,$home_article_paragraph,$isSlider);
        echo "<h1>Congrats.your data has been submited!!!</h1>";
 
 }
@@ -39,7 +30,7 @@ if(isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Home Page</title>
-    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
     <?php include "adminHeader.php"?>
@@ -48,7 +39,7 @@ if(isset($_POST["submit"])){
             <label >Choose image:</label>
              <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="article-image"><br>
              <label for="">Is Slider</label>
-             <input type="checkbox" name="is_slider"><br>
+             <input type="checkbox" name="isSlider"><br>
             <label>Article title:</label>
             <input type="text" name="article-title"><br>
             <label>Article text content</label>

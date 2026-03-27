@@ -13,10 +13,6 @@ class HomeArticleContr{
     }
 
 
-  //   public function createHomeArticle(){
- //       $this->setHomeArticle($this->imageFileName,$this->imageFilePath,$this->articleTitle,$this->articleParagraph,$this->isSlider);
-  //  }
-
 
     public function getAll(){
         $sql = $this->dbs->connect()->prepare('SELECT* FROM home_page_article;');
@@ -34,6 +30,30 @@ class HomeArticleContr{
 
     }
 
+
+    public function getArticles(){
+        $sql = $this->dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=0;');
+        if($sql->execute()){
+            return $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+    }
+
+  
+  
+    public function create($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$isSlider){
+        $sql = $this->dbs->connect()->prepare('INSERT INTO home_page_article(home_article_title,home_article_paragraph,home_is_slider,home_article_image_name,home_article_image_path) VALUES(?,?,?,?,?)');
+
+        
+        if($sql->execute(array($articleTitle,$articleParagraph,$isSlider,$imageFileName,$imageFilePath))){
+           header("location:../home-page-add.php?error=none");
+           exit();
+        }
+        $sql=null;
+         header("location:home-page-add.php/?error=stmtfailed");
+         exit();
+         
+    }
 
     public function edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId){
         $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET home_article_image_name=?,home_article_image_path=?,home_article_title =?,home_article_paragraph=? WHERE home_article_id=?;');

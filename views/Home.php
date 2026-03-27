@@ -70,29 +70,23 @@ session_start()
             </article>
         -->
             <?php
-        
-    /*
-     * $articleSql = $dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=0;');
-         if($articleSql->execute()){
-            $articlesArray = $articleSql->fetchAll(PDO::FETCH_ASSOC);
-         }
+
+            require_once('../controllers/home-article-contr.php');
+            $home = new HomeArticleContr();
+            $articlesArray = $home->getArticles();
+
+
 
          foreach($articlesArray as $article){
-        
                     echo "<article class='home-article'>";
                     echo  "<div class='home-article-content'>";
                     echo " <h2 class='home-article-h2'>{$article['home_article_title']}</h2>";
                     echo "<p>{$article["home_article_paragraph"]}</p>";
                     echo "</div>";
-                    echo "<div class='home-article-image' style=\"background-image:url('Images/{$article['home_article_image_name']}');\">";
+                    echo "<div class='home-article-image' style=\"background-image:url('../Images/{$article['home_article_image_name']}');\">";
                     echo "</div>";
                     echo "</article>";
          } 
-     * 
-     * 
-     * 
-     * 
-     */
         ?>
 
 
