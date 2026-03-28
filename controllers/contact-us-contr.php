@@ -35,9 +35,9 @@ class ContactUsContr{
             echo "<h1>Item deleted!!!</h1>";
             exit();
         }
-        
-
     }
+
+    
 
 
 }

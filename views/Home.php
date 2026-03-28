@@ -75,18 +75,16 @@ session_start()
             $home = new HomeArticleContr();
             $articlesArray = $home->getArticles();
 
-
-
-         foreach($articlesArray as $article){
-                    echo "<article class='home-article'>";
-                    echo  "<div class='home-article-content'>";
-                    echo " <h2 class='home-article-h2'>{$article['home_article_title']}</h2>";
-                    echo "<p>{$article["home_article_paragraph"]}</p>";
-                    echo "</div>";
-                    echo "<div class='home-article-image' style=\"background-image:url('../Images/{$article['home_article_image_name']}');\">";
-                    echo "</div>";
-                    echo "</article>";
-         } 
+            foreach($articlesArray as $article){
+                        echo "<article class='home-article'>";
+                        echo  "<div class='home-article-content'>";
+                        echo " <h2 class='home-article-h2'>{$article['home_article_title']}</h2>";
+                        echo "<p>{$article["home_article_paragraph"]}</p>";
+                        echo "</div>";
+                        echo "<div class='home-article-image' style=\"background-image:url('../Images/{$article['home_article_image_name']}');\">";
+                        echo "</div>";
+                        echo "</article>";
+            } 
         ?>
 
 

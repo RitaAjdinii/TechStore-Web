@@ -25,14 +25,11 @@
             <tbody>
             <?php
 
-            require_once("../controllers/home-article-contr.php");
-
+            require_once("../controllers/user-contr.php");
+            $user = new UserContr();
+            $usersArray = $user->getAll();
             
-/*
- * 
- *   if($usersSql->execute()){
-                    $usersArray = $usersSql->fetchAll(PDO::FETCH_ASSOC);
-                 
+
                     foreach ($usersArray as $user) {
                         echo "<tr>";
                         echo "<td class='user'>{$user['user_id']}</td>";
@@ -43,15 +40,13 @@
                         echo "<td class='user'>{$user['user_birthdate']}</td>";
                         echo "<td class='user'>" . ($user['user_isAdmin'] ? 'Yes' : 'No') . "</td>";
                         echo "<td class='btn-controls' id='edit-btn'>
-                                <a href='classes/edit.php?id=$user[user_id]'>Edit</a>
+                                <a href='edit-user.php?id=$user[user_id]'>Edit</a>
                             </td>";
                         echo "<td class='btn-controls'  id='delete-btn'> 
-                        <a href='classes/delete.php?id=$user[user_id]' >Delete</a> 
+                        <a href='delete-user.php?id=$user[user_id]' >Delete</a> 
                             </td>";
                         echo "</tr>";
-                    
- * 
- */
+                    }
                 
     
                 ?>

@@ -39,8 +39,6 @@
     ?>
 
      <?php
-
-           // $infoSql = $dbs->connect()->prepare('SELECT * FROM about_us_info WHERE isInfo=1;');
            require_once "../controllers/aboutus-contr.php";
 
            $about = new AboutUsContr();

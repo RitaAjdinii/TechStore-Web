@@ -5,9 +5,7 @@ include "../classes/dbh.class.php";
 class HomeArticleContr{
 
     private $dbs;
-    //$imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$isSlider)
-
-
+   
     public function __construct(){
         $this->dbs = new Dbh();
     }

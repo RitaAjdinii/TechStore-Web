@@ -12,19 +12,17 @@ class Signup extends Dbh{
             }
         }
 
-       
-            
+        $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
         
-            $hashedPassword = password_hash($password,PASSWORD_DEFAULT);
         if(!$stmt->execute(array($username,$location,$birthdate,$email,$hashedPassword,$isAdmin))){
             $stmt=null;
             header("location:../Signup.php/?error=stmtfailed");
             exit();
-        
+        }
 
-        }
          $stmt=null;
-        }
+        
+         }
     
     }
 

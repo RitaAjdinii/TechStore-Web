@@ -23,7 +23,7 @@
     <tbody>
         <?php
 
-          require_once "../controllers/contact-us-contr.php";
+        require_once "../controllers/contact-us-contr.php";
         $contact = new ContactUsContr();
 
         $contactsArray = $contact->getAll();

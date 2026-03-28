@@ -12,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body class="registration-body">
+    
     <main class="login-main">
       <div class="form-container login_container">
         <div class="login-container">

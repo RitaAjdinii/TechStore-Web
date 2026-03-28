@@ -10,8 +10,6 @@ class SignupContr extends Signup{
     private $isAdmin;
    
 
-
-
     public function __construct($username,$location,$birthdate,$email,$password,$isAdmin){
         $this->username=$username;
         $this->location = $location;
