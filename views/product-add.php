@@ -9,22 +9,14 @@
 </head>
 <body>
     <?php
-
         if(isset($_POST["submit"])){
-            $image =$_FILES['image'];
             $name = $_POST['product-name'];
             $description= $_POST['product-description'];
             $price = $_POST['product-price'];
-
-            $targetDirectory = "../images/";
-            $imageFileName = basename($_FILES["image"]["name"]);
-            $imageFilePath = $targetDirectory.$imageFileName;
-            
             require_once "../controllers/product-contr.php";
 
             $product = new ProductContr();
-            $product->createProduct($imageFileName,$imageFilePath,$name,$description,$price);
-            header("location:../product-add.php?error=none");
+            $product->createProduct($name,$description,$price);
             echo "<h1>Congrats.your data has been submited!!!</h1>";
         }
     ?>

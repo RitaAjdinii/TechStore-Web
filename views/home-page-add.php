@@ -4,19 +4,15 @@
 if(isset($_POST["submit"])){
     require_once('../controllers/home-article-contr.php');
     $home_article_title = $_POST['article-title'];
-     $home_article_paragraph = $_POST['article-paragraph'];
-      $image =$_FILES['article-image'];
+    $home_article_paragraph = $_POST['article-paragraph'];
      if($_POST['isSlider']==null){
-        $isSlider = 0;
+      $isSlider = 0;
      }else{
         $isSlider = 1;
      }
-     $targetDirectory = "images/";
-     $imageFileName = basename($_FILES["article-image"]["name"]);
-     $imageFilePath = $targetDirectory.$imageFileName;
-    $home = new HomeArticleContr();
-    $home->create($imageFileName,$imageFilePath,$home_article_title,$home_article_paragraph,$isSlider);
-       echo "<h1>Congrats.your data has been submited!!!</h1>";
+     $home = new HomeArticleContr();
+     $home->create($home_article_title,$home_article_paragraph,$isSlider);
+     echo "<h1>Congrats.your data has been submited!!!</h1>";
 
 }
 

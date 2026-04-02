@@ -78,7 +78,7 @@
                     echo "<h2 class='article-h2'>{$article['about_us_main_title']}</h2>";
                     echo "<p>{$article['about_us_text']}</p>";
                     echo "</div>";
-                    echo "<div class='article-image' style='background-image:url('../{$article['image_file_path']}')'>";
+                    echo "<div class='article-image' style=\"background-image:url('../Images/{$article['image_file_name']}');\">";
                     echo "</div>";
                     echo "</article>";
                 }

@@ -18,7 +18,7 @@ $successMessage="";
 
 
 
-$targetDirectory ="images/";
+$targetDirectory ="Images/";
 $homeArticleId = $_GET["id"];
 $row=$home->get($homeArticleId);
 $imageFileName = $row['home_article_image_name'];

@@ -2,30 +2,24 @@
 if(isset($_POST['submit'])){
     require_once('../controllers/aboutus-contr.php');
     
-    
     $aboutUsMainTitle= $_POST['main-title'];
     $aboutUsTitle= $_POST['info-title'];
     $aboutUsText = $_POST['about-info'];
-    $image = $_FILES['image'];
-    $imageFileName = basename($_FILES['image']["name"]);
     $isInfo;
-    $imageFilePath = "../images".$imageFileName;
-     if($_POST['isInfo']==null){
-        $isInfo = 0;
+    if($_POST['isInfo']==null){
+       $isInfo = 0;
      }else{
         $isInfo = 1;
      }
-
     $about = new AboutUsContr();
-    $createAbout = $about->create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo);
-     header("location:../product-add.php?error=none");
-            echo "<h1>Congrats.your data has been submited!!!</h1>";
+    $createAbout = $about->create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo);
+    header("location:../aboutus-add-info.php?error=none");
+    echo "<h1>Congrats.your data has been submited!!!</h1>";
 
 }
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

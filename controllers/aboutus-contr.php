@@ -10,14 +10,20 @@
         $this->dbs = new Dbh();
     }//fix after user page view about
 
-    public function create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo){//create article when isInfo = 0
-    
-    $aboutUsSQL = $this->dbs->connect()->prepare('INSERT INTO about_us_info(about_us_main_title,about_us_title,about_us_text,image_file_name,image_file_path,isInfo) VALUES(?,?,?,?,?,?)');
+    public function create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo){//create article when isInfo = 0
+        $aboutUsSQL = $this->dbs->connect()->prepare('INSERT INTO about_us_info(about_us_main_title,about_us_title,about_us_text,image_file_name,image_file_path,isInfo) VALUES(?,?,?,?,?,?)');
+        $targetDirectory = "../Images/";
+        $image = $_FILES['image'];
+        $imageFileName = basename($_FILES['image']["name"]);
+        $imageFilePath = $targetDirectory.$imageFileName;
        if($aboutUsSQL->execute(array($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo))){
-        return  $aboutUsSQL->fetchAll();
+        move_uploaded_file($_FILES["image"]["tmp_name"],$imageFilePath);
+        header("location:../views/aboutus-add-info.php/?error=none");
         }
-        return [];
-        }
+        header("location:../views/aboutus-add-info.php/?error=stmtfailed");
+        
+
+    }
      
     public function get($id){
         $aboutUsSQL= $this->dbs->connect()->prepare('SELECT * FROM about_us_info WHERE about_us_info_id=?;');

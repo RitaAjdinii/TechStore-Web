@@ -37,20 +37,16 @@ class HomeArticleContr{
 
     }
 
-  
-  
-    public function create($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$isSlider){
-        $sql = $this->dbs->connect()->prepare('INSERT INTO home_page_article(home_article_title,home_article_paragraph,home_is_slider,home_article_image_name,home_article_image_path) VALUES(?,?,?,?,?)');
-
-        
-        if($sql->execute(array($articleTitle,$articleParagraph,$isSlider,$imageFileName,$imageFilePath))){
-           header("location:../home-page-add.php?error=none");
-           exit();
-        }
-        $sql=null;
-         header("location:home-page-add.php/?error=stmtfailed");
-         exit();
-         
+    public function create($articleTitle,$articleParagraph,$isSlider){
+         $sql = $this->dbs->connect()->prepare('INSERT INTO home_page_article(home_article_title,home_article_paragraph,home_is_slider,home_article_image_name,home_article_image_path) VALUES(?,?,?,?,?)');
+         $targetDirectory = "../Images/";
+         $imageFileName = basename($_FILES["image"]["name"]);
+         $imageFilePath = $targetDirectory.$imageFileName;
+         if($sql->execute(array($articleTitle,$articleParagraph,$isSlider,$imageFileName,$imageFilePath))){
+                move_uploaded_file($_FILES['image']['tmp_name'],$imageFilePath);
+                header("location:../views/aboutus-add-info.php/?error=none");
+         }
+                header("location:../views/aboutus-add-info.php/?error=stmtfailed");
     }
 
     public function edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId){

@@ -13,7 +13,7 @@ $aboutInfoText="";
 
 
 
-$targetDirectory ="images/";
+$targetDirectory ="Images/";
 $aboutId = $_GET["id"];
 $aboutRow = $about->get($aboutId);
 

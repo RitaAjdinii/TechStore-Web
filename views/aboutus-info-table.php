@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products Table</title>
+    <title>About Us Table</title>
     <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>

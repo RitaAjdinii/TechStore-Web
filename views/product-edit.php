@@ -11,7 +11,7 @@
         require_once "../controllers/product-contr.php";
 
         $product = new ProductContr();
-        $targetDirectory ="images/";
+        $targetDirectory ="Images/";
 
         $productId = $_GET["id"];
         $row = $product->get($productId);
