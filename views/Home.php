@@ -59,22 +59,11 @@ session_start()
 
     <main>
         <section class="home-content">
-        <!--
-        <article class="home-article">
-                 <div class="home-article-content">
-                    <h2 class="home-article-h2">This is an article</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, non libero? Incidunt, et omnis eaque pariatur modi deserunt saepe consectetur!</p>
-                </div>
-                <div class="home-article-image" style="background-image:url('Images/Lenovo IdeaCentre AIO 3i, All-in-One Desktop.webp');">
-                </div>
-            </article>
-        -->
             <?php
 
             require_once('../controllers/home-article-contr.php');
             $home = new HomeArticleContr();
             $articlesArray = $home->getArticles();
-
             foreach($articlesArray as $article){
                         echo "<article class='home-article'>";
                         echo  "<div class='home-article-content'>";
@@ -85,6 +74,8 @@ session_start()
                         echo "</div>";
                         echo "</article>";
             } 
+
+            $slider = $home->getSliders();
         ?>
 
 
@@ -99,9 +90,8 @@ session_start()
         let index =0;
         let sliderTitle = document.querySelector('.main-slider-h1');
         let sliderParagraph = document.querySelector('.slider-paragraph');
-        let sliderBackgroundImg;
+        let sliderBackgroundImg;       
        
-        console.log(slider);
         leftBtn.addEventListener("click",()=>{
              index -=1;
             if(index<0){
@@ -110,23 +100,21 @@ session_start()
 
            sliderTitle.textContent=articleTitle= slider[index].home_article_title;
             sliderParagraph.textContent=articleParagraph= slider[index].home_article_paragraph;
-            sliderBackgroundImg = slider[index].home_article_image_path;
+            sliderBackgroundImg = "../Images/"+slider[index].home_article_image_name;
             mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
-         
         
            
         });
 
 
         rightBtn.addEventListener("click",()=>{
-            
             index +=1;
             if(index>slider.length-1){
                 index = 0;
             }
              sliderTitle.textContent=articleTitle= slider[index].home_article_title;
             sliderParagraph.textContent=articleParagraph= slider[index].home_article_paragraph;
-            sliderBackgroundImg = slider[index].home_article_image_path;
+           sliderBackgroundImg = "../Images/"+slider[index].home_article_image_name;
             mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
         });
 
@@ -134,7 +122,7 @@ session_start()
         document.addEventListener("DOMContentLoaded",()=>{
                sliderTitle.textContent=articleTitle= slider[0].home_article_title;
             sliderParagraph.textContent=articleParagraph= slider[0].home_article_paragraph;
-            sliderBackgroundImg = slider[0].home_article_image_path;
+            sliderBackgroundImg = "../Images/"+slider[0].home_article_image_name;
             mainSlider.style.backgroundImage = `url(${sliderBackgroundImg})`;
 
         });

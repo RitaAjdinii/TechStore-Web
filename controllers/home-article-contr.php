@@ -49,6 +49,13 @@ class HomeArticleContr{
                 header("location:../views/aboutus-add-info.php/?error=stmtfailed");
     }
 
+    public function getSliders(){        
+        $sql = $this->dbs->connect()->prepare('SELECT * FROM home_page_article WHERE home_is_slider=1;');
+         if($sql->execute()){
+            return $sql->fetchAll();
+        }
+    }
+
     public function edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId){
         $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET home_article_image_name=?,home_article_image_path=?,home_article_title =?,home_article_paragraph=? WHERE home_article_id=?;');
         if($sql->execute(array($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId))){
