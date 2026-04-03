@@ -22,8 +22,9 @@
     ?>
 
     <?php include "../views/adminHeader.php";?>
+        <main class="crud-form-body">
     <h1>Create product</h1>
-    <form method="post" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data" class="crud-form">
         <label >Choose image:</label>
         <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="image"><br>
         <label>Product name:</label>
@@ -35,5 +36,6 @@
         <button type="submit" name="submit">Create</button>
         <button><a href="../AdminDashboard.php">Cancel</a></button>
     </form> 
+</main>
 </body>
 </html>

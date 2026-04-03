@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"]=='POST'){
     <link rel="stylesheet" href="">
 </head>
 <body>
-    <form  method="POST">
+    <form  method="POST" class="crud-form">
         <input type="hidden" value="<?php echo $id?>" name="id">
         <label >Name</label>
         <input type="text" name="name" value="<?php echo $name;?>" >

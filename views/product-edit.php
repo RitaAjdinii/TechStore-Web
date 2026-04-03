@@ -35,8 +35,10 @@
     ?>
 
     <?php include "adminHeader.php";?>
-    <h1>Product Edit</h1>
-    <form method="post" enctype="multipart/form-data">
+        <main class="crud-form-body">
+
+            <h1>Product Edit</h1>
+        <form method="post" enctype="multipart/form-data" class="crud-form">
         <input type="hidden" value="<?php echo $productId?>" name="product-id">
         <label >Product image:</label>
         <input type="file" name="image-file-path" value="<?php echo $productImgFilePath?>" accept="image/jpeg,image/png,image/jpg,image/webp" >
@@ -52,5 +54,7 @@
         <button type="submit">Submit</button>
         <a href="AdminDashboard.php">Cancel</a>
     </form> 
+
+        </main>
 </body>
 </html>

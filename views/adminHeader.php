@@ -16,10 +16,7 @@
             <li><a href="products-table.php">Products Table</a></li>
             <li><a href="aboutus-add-info.php">Add about info</a></li>
             <li><a href="aboutus-info-table.php">About us info table</a></li>
-            <li>Login Edit</li>
-            <li>Signup Edit</li>
-            <li>Add Pages++</li>
-            <form action="includes/logout.inc.php" method="POST"><li><button type=submit>Logout</button></li></form>
+            <form action="../includes/logout.inc.php" method="POST"><button type=submit class="logout">Logout</button></form>
         </ul>
 
         <script src="../styles/admin-navbar.js"> </script>

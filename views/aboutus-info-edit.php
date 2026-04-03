@@ -47,7 +47,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     <?php include "adminHeader.php";?>
     <h1>About Us Edits and CRUDs</h1>
 
-    <form  method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data" class="crud-form">
             <label >Choose image:</label>
             <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="image" value="<?php echo $imageFileName;?>"><br>
             <label>About us  main title:</label>

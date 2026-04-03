@@ -31,9 +31,9 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <?php include "adminHeader.php";?>
-    <h1>About Us Edits and CRUDs</h1>
-
-    <form  method="post" enctype="multipart/form-data">
+    <main class="crud-form-body">
+          <h1>About Us Edits and CRUDs</h1>
+    <form  method="post" enctype="multipart/form-data" class="crud-form">
             <label >Choose image:</label>
             <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="image"><br>
             <label for="">Is Info</label>
@@ -47,5 +47,6 @@ if(isset($_POST['submit'])){
             <button type="submit" name="submit">Create</button>
             <button><a href="../views/AdminDashboard.php">Cancel</a></button>
     </form> 
+    </main>
 </body>
 </html>

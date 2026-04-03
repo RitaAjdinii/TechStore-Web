@@ -1,5 +1,6 @@
 const hamburger = document.querySelector(".hamburger");
 const navContent = document.querySelector(".nav-content");
+const navList = document.querySelector(".nav-list");
 let isOpen = false;
 
 hamburger.addEventListener("click", () => {

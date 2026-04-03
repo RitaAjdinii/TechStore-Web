@@ -53,8 +53,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 </head>
 <body>
     <?php include "adminHeader.php";?>
-    <h1>Article Edit</h1>
-    <form  method="post" enctype="multipart/form-data">
+
+    <main class="crud-form-body">
+        <h1>Article Edit</h1>
+    <form  method="post" enctype="multipart/form-data" class="crud-form">
         <input type="hidden" value="<?php echo $homeArticleId?>" name="article-id">
         <label >Choose image:</label>
         <input type="file" name="article-image" value="<?php echo $imageFilePath?>" accept="image/jpeg,image/png,image/jpg,image/webp" >
@@ -70,5 +72,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         <button type="submit">Submit</button>
         <button><a href="AdminDashboard.php">Cancel</a></button>
     </form> 
+    </main>
 </body>
 </html>
