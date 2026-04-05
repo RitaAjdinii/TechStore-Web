@@ -17,11 +17,11 @@ if(isset($_POST["submit"])){
 
       include "../classes/dbh.class.php";
       include "../classes/signup.class.php";
-      include "../classes/signup-contr.class.php";
+      include "..\controllers\signup-contr.class.php";
 
       $signup = new SignupContr($name,$location,$birthdate,$email,$password,$isAdmin);
 
       $signup->signupUser();
-       header("location:../index.php?error=none");
+       header("location:../views/Home.php?error=none");
 
 }

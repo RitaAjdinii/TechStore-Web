@@ -17,7 +17,7 @@ session_start();
       <div class="form-container login_container">
         <div class="login-container">
           <h3>LOGIN</h3>
-          <form action="includes/login.inc.php" method="post">
+          <form action="../includes/login.inc.php" method="post">
             <input type="text" name="email" placeholder="EMAIL " /><br>
             <input type="password" name="password" placeholder="PASSWORD" />
             <p id="forgor"><a href="">Forgot Password?</a></p>
@@ -38,7 +38,7 @@ session_start();
               Tekk ID is a unified account for all TEKK devices
             </p>
           </div>
-          <form action="includes/signup.inc.php" method="post">
+          <form action="../includes/signup.inc.php" method="post">
             <input
               type="text"
               name="username"

@@ -8,7 +8,7 @@ class Signup extends Dbh{
 
         if($emailStatement->execute(array($email))){
             if($emailStatement->rowCount()!=0){
-                header("location: ../Login.php?error=emailAlreadyInUse");
+                header("location: ../views/Login.php?error=emailAlreadyInUse");
             }
         }
 
@@ -16,7 +16,7 @@ class Signup extends Dbh{
         
         if(!$stmt->execute(array($username,$location,$birthdate,$email,$hashedPassword,$isAdmin))){
             $stmt=null;
-            header("location:../Signup.php/?error=stmtfailed");
+            header("location:../views/Signup.php/?error=stmtfailed");
             exit();
         }
 

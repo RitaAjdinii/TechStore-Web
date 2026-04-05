@@ -22,11 +22,6 @@ class loginContr extends Login{
         $this->getUser($this->email,$this->password);
     }
 
-    
-
-  
-
-
     public function emptyInput(){
         $result;
 

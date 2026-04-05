@@ -19,32 +19,27 @@ class SignupContr extends Signup{
         $this->isAdmin = $isAdmin;      
     }
     
-
-
     public function signupUser(){
         if($this->emptyInput()==false){
-             header("location: ../index.php?error=emptyInput");
+             header("location: ../views/Login.php?error=emptyInput");
             exit();
-
         }
 
         if($this->invalidUsername()==false){
 
-            header("location: ../index.php?error=invalidusername");
+            header("location: ../views/Login.php?error=invalidusername");
             exit();
         }
         if($this->invalidEmail()==false){
 
-            header("location: ../index.php?error=invalidEmail");
+            header("location: ../views/Login.php?error=invalidEmail");
             exit();
         }
         if($this->invalidPassword()==false){
 
-            header("location: ../index.php?error=invalidPassword");
+            header("location: ../views/Login.php?error=invalidPassword");
             exit();
         }
-
-
 
         $this->setUser($this->username,$this->location,$this->birthdate,$this->email,$this->password,$this->isAdmin);
     }
@@ -58,11 +53,8 @@ class SignupContr extends Signup{
         }else{
             $result = true;
         }
-
-        return $result;
+         return $result;
     }
-
-    
 
      public function invalidUsername(){
         $result;
@@ -74,9 +66,6 @@ class SignupContr extends Signup{
 
         return $result;
     }
-
-
-
 
     public function invalidEmail(){
         $result;
@@ -102,9 +91,6 @@ class SignupContr extends Signup{
 
         return $result;
     }
-
-    
-
 
     //username taken handler check?? to see if your username was taken by another user.\
 

@@ -14,7 +14,6 @@ class Login extends Dbh{
 
         if($stmt->rowCount()==0){
             $stmt = null;
-
             header("location: ../Login.php?error=usernotfound");
             exit(); 
         }

@@ -7,7 +7,7 @@ if(isset($_POST["submit"])){
 
     include "../classes/dbh.class.php";
     include "../classes/login.class.php";
-    include "../classes/login-contr.php";
+    include "..\controllers\login-contr.php";
 
     
   session_start();
@@ -15,11 +15,8 @@ if(isset($_POST["submit"])){
 
   $login->loginUser();
 
-  if($_SESSION["userAdmin"]==1){
-    header("location:../AdminDashboard.php");
-  }else{
-    header("location:../Home.php");
-  }
+
+    header("location:../views/Home.php");
   
  
 
