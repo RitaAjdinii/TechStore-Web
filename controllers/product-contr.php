@@ -10,13 +10,13 @@
             $this->dbs = new Dbh();
         }
 
-        public function createProduct($name,$description,$price){
-            $sql = $this->dbs->connect()->prepare('INSERT INTO product(image_file_name,image_file_path,product_name,product_description,product_price) VALUES(?,?,?,?,?)');
+        public function createProduct($name,$description,$price,$createdBy){
+            $sql = $this->dbs->connect()->prepare('INSERT INTO product(image_file_name,image_file_path,product_name,product_description,product_price,created_by) VALUES(?,?,?,?,?,?)');
             $targetDirectory = "../Images/";
             $imageFileName = basename($_FILES["image"]["name"]);
             $imageFilePath = $targetDirectory.$imageFileName;
             
-            if($sql->execute(array($imageFileName,$imageFilePath,$name,$description,$price))){
+            if($sql->execute(array($imageFileName,$imageFilePath,$name,$description,$price,$createdBy))){
                 $sql=null;
                 move_uploaded_file($_FILES['image']['tmp_name'],$imageFilePath);
                 header("location:../views/product-add.php/?error=none");
@@ -44,9 +44,9 @@
         }   
 
 
-        public function edit($productId,$imageFileName,$imageFilePath,$name,$description,$price){
-            $sql = $this->dbs->connect()->prepare('UPDATE product SET image_file_name =?,image_file_path=?,product_name=?,product_description=?,product_price=? WHERE product_id =?;');
-            if($sql->execute(array($imageFileName,$imageFilePath,$name,$description,$price,$productId))){
+        public function edit($productId,$imageFileName,$imageFilePath,$name,$description,$price,$editedBy){
+            $sql = $this->dbs->connect()->prepare('UPDATE product SET image_file_name =?,image_file_path=?,product_name=?,product_description=?,product_price=?,edited_by=? WHERE product_id =?;');
+            if($sql->execute(array($imageFileName,$imageFilePath,$name,$description,$price,$editedBy,$productId))){
              header("location:../views/product-edit.php?id=" . $productId . "&error=none");
             }
              header("location:../views/product-edit.php/?error=stmtfailed");

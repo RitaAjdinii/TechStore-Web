@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +12,7 @@
 </head>
 <body>
     <?php
+
         require_once "../controllers/product-contr.php";
 
         $product = new ProductContr();
@@ -29,8 +34,9 @@
             $name= $_POST['product-name'];
             $description = $_POST['product-description'];
             $price = $_POST['product-price'];
+            $editedBy = $_SESSION['username'];
 
-            $product->edit($productId,$imageFileName,$imageFilePath,$name,$description,$price);
+            $product->edit($productId,$imageFileName,$imageFilePath,$name,$description,$price,$editedBy);
         } 
     ?>
 

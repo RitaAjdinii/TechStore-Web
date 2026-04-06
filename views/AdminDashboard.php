@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+if(isset($_SESSION['userAdmin'])&& $_SESSION['userAdmin']==1){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +13,7 @@
     <link rel="stylesheet" href="../styles/AdminDashboard.css">
 </head>
 <body>
+   
      <?php include "adminHeader.php";?>
     <main class="main-container">
         <h1>List of Users added</h1>
@@ -56,3 +63,12 @@
     </main>
     </body>
     </html>
+
+
+    <?php
+
+}else{
+    header('location:Login.php');
+}
+
+

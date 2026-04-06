@@ -18,6 +18,11 @@
                 <th>Name:</th>
                 <th>Description:</th>
                 <th>Price:</th>
+                <th>Image File Name:</th>
+                <th>Created At:</th>
+                <th>Created By:</th>
+                <th>Edited At:</th>
+                <th>Edited By:</th>
             </tr>
         </thead>
     <tbody>
@@ -35,7 +40,10 @@
                     echo "<td class='product'>{$product['product_description']}</td>";
                     echo "<td class='product'>{$product['product_price']}</td>";
                      echo "<td class='product'>{$product['image_file_name']}</td>";
-                     echo "<td class='product'>{$product['image_file_path']}</td>";
+                     echo "<td class='product'>{$product['created_at']}</td>";
+                     echo "<td class='product'>{$product['created_by']}</td>";
+                     echo "<td class='product'>{$product['edited_at']}</td>";
+                      echo "<td class='product'>{$product['edited_by']}</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
                             <a href='product-edit.php?id=$product[product_id]'>Edit</a>
                           </td>";

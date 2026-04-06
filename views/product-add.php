@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +11,17 @@
 </head>
 <body>
     <?php
+
+  
         if(isset($_POST["submit"])){
             $name = $_POST['product-name'];
             $description= $_POST['product-description'];
             $price = $_POST['product-price'];
+            $createdBy = $_SESSION['username'];
             require_once "../controllers/product-contr.php";
 
             $product = new ProductContr();
-            $product->createProduct($name,$description,$price);
+            $product->createProduct($name,$description,$price,$createdBy);
             echo "<h1>Congrats.your data has been submited!!!</h1>";
         }
     ?>

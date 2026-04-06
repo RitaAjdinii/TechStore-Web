@@ -28,7 +28,7 @@ class Login extends Dbh{
             exit();
         }
         else{
-            $stmt = $this->connect()->prepare('SELECT user_password,user_email,user_id,user_isAdmin FROM user WHERE (user_email=? OR user_name = ?)AND user_password=?;');
+            $stmt = $this->connect()->prepare('SELECT user_name,user_password,user_email,user_id,user_isAdmin FROM user WHERE (user_email=? OR user_name = ?)AND user_password=?;');
 
             if(!$stmt->execute(array($email,$email,$passwordHashed[0]["user_password"]))){
                 $stmt =null;
@@ -52,6 +52,7 @@ class Login extends Dbh{
             $_SESSION["userid"] = $user["user_id"];
             $_SESSION["useremail"] = $user["user_email"];
             $_SESSION["userAdmin"] = $user["user_isAdmin"];
+            $_SESSION['username'] = $user["user_name"];
 
         }
         

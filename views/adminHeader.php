@@ -9,6 +9,7 @@
         <ul class="nav-content">
             <li>Users Info</li>
             <li>Admin profile</li> 
+             <li><a href="recent-activity.php">Recent Activity</a></li>
             <li><a href="home-page-add.php">Home page add</a></li>
             <li><a href="home-page-article-table.php">Home page table</a></li>
             <li><a href="contact-us-table.php">Contact Us Table</a></li>
