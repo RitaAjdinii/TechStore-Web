@@ -1,8 +1,7 @@
 <?php
+session_start();
 
 require_once('../controllers/home-article-contr.php');
-
-
 $home = new HomeArticleContr();
 
 
@@ -32,11 +31,13 @@ $isSlider = $row['home_is_slider'];
 
     
 if($_SERVER["REQUEST_METHOD"]=="POST"){
+     $homeArticleId = $_POST["article-id"];
     $imageFileName = basename($_FILES['article-image']["name"]);
     $imageFilePath = $targetDirectory.$imageFileName;
     $articleTitle = $_POST['article-title'];
     $articleParagraph = $_POST['article-paragraph'];
-    $home->edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId);
+    $editedBy = $_SESSION['username'];
+    $home->edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$editedBy,$homeArticleId);
 }
 
 

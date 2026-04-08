@@ -8,24 +8,23 @@
 </head>
 <body>
     <?php include "adminHeader.php";?>
-
-<main class="main-container">
-    <h1>Products List</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>ID:</th>
-                <th>Name:</th>
-                <th>Description:</th>
-                <th>Price:</th>
-                <th>Image File Name:</th>
-                <th>Created At:</th>
-                <th>Created By:</th>
-                <th>Edited At:</th>
-                <th>Edited By:</th>
-            </tr>
-        </thead>
-    <tbody>
+    <main class="main-container">
+        <h1>Products List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID:</th>
+                    <th>Name:</th>
+                    <th>Description:</th>
+                    <th>Price:</th>
+                    <th>Image File Name:</th>
+                    <th>Created At:</th>
+                    <th>Created By:</th>
+                    <th>Edited At:</th>
+                    <th>Edited By:</th>
+                </tr>
+            </thead>
+        <tbody>
         <?php
         require_once "../controllers/product-contr.php";
 

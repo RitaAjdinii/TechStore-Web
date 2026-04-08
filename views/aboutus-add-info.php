@@ -1,18 +1,18 @@
 <?php
+session_start();
 if(isset($_POST['submit'])){
     require_once('../controllers/aboutus-contr.php');
     
     $aboutUsMainTitle= $_POST['main-title'];
     $aboutUsTitle= $_POST['info-title'];
     $aboutUsText = $_POST['about-info'];
-    $isInfo;
-    if($_POST['isInfo']==null){
-       $isInfo = 0;
-     }else{
-        $isInfo = 1;
+    $createdBy = $_SESSION['username'];
+    $isInfo = 0;
+    if($_POST['isInfo']!=null){
+       $isInfo = 1;
      }
     $about = new AboutUsContr();
-    $createAbout = $about->create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo);
+    $createAbout = $about->create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo,$createdBy);
     header("location:../aboutus-add-info.php?error=none");
     echo "<h1>Congrats.your data has been submited!!!</h1>";
 

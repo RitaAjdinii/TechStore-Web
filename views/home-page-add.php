@@ -1,19 +1,16 @@
 <?php
+session_start();
 
 
 if(isset($_POST["submit"])){
-    require_once('../controllers/home-article-contr.php');
     $home_article_title = $_POST['article-title'];
-    $home_article_paragraph = $_POST['article-paragraph'];
-     if($_POST['isSlider']==null){
-      $isSlider = 0;
-     }else{
-        $isSlider = 1;
-     }
-     $home = new HomeArticleContr();
-     $home->create($home_article_title,$home_article_paragraph,$isSlider);
-     echo "<h1>Congrats.your data has been submited!!!</h1>";
-
+    $home_article_paragraph= $_POST['article-paragraph'];
+    $createdBy = $_SESSION['username'];
+    $isSlider =$_POST['isSlider'] ?? 0;
+    require_once "../controllers/home-article-contr.php";
+    $home = new HomeArticleContr();
+    $home->create($home_article_title,$home_article_paragraph,$isSlider,$createdBy);
+    echo "<h1>Congrats.your data has been submited!!!</h1>";
 }
 
 
@@ -34,7 +31,7 @@ if(isset($_POST["submit"])){
          <h1>Create home article</h1>
             <form  method="post" enctype="multipart/form-data" class="crud-form">
             <label >Choose image:</label>
-             <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="article-image"><br>
+             <input type="file" accept="image/jpeg,image/png,image/jpg,image/webp" name="photo"><br>
              <label for="">Is Slider</label>
              <input type="checkbox" name="isSlider"><br>
             <label>Article title:</label>

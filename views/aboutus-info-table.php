@@ -21,6 +21,10 @@
                 <th>Is Info article:</th>
                 <th>Image name:</th>
                 <th>Image path:</th>
+                <th>Created At:</th>
+                <th>Created By:</th>
+                <th>Edited At:</th>
+                <th>Edited By:</th>
             </tr>
         </thead>
     <tbody>
@@ -40,6 +44,10 @@
                      echo "<td class='product'>{$about['isInfo']}</td>";
                      echo "<td class='product'>{$about['image_file_name']}</td>";
                      echo "<td class='product'>{$about['image_file_path']}</td>";
+                     echo "<td class='product'>{$about['created_at']}</td>";
+                     echo "<td class='product'>{$about['created_by']}</td>";
+                     echo "<td class='product'>{$about['edited_at']}</td>";
+                     echo "<td class='product'>{$about['edited_by']}</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
                             <a href='aboutus-info-edit.php?id=$about[about_us_info_id]'>Edit</a>
                           </td>";

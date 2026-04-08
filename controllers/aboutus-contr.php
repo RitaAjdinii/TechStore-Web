@@ -10,13 +10,13 @@
         $this->dbs = new Dbh();
     }//fix after user page view about
 
-    public function create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo){//create article when isInfo = 0
-        $aboutUsSQL = $this->dbs->connect()->prepare('INSERT INTO about_us_info(about_us_main_title,about_us_title,about_us_text,image_file_name,image_file_path,isInfo) VALUES(?,?,?,?,?,?)');
+    public function create($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$isInfo,$createdBy){//create article when isInfo = 0
+        $aboutUsSQL = $this->dbs->connect()->prepare('INSERT INTO about_us_info(about_us_main_title,about_us_title,about_us_text,image_file_name,image_file_path,isInfo,created_by) VALUES(?,?,?,?,?,?,?)');
         $targetDirectory = "../Images/";
         $image = $_FILES['image'];
         $imageFileName = basename($_FILES['image']["name"]);
         $imageFilePath = $targetDirectory.$imageFileName;
-       if($aboutUsSQL->execute(array($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo))){
+       if($aboutUsSQL->execute(array($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$isInfo,$createdBy))){
         move_uploaded_file($_FILES["image"]["tmp_name"],$imageFilePath);
         header("location:../views/aboutus-add-info.php/?error=none");
         }
@@ -57,9 +57,9 @@
     }
 
 
-    public function edit($aboutUsId,$aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath){
-        $aboutUsSQL= $this->dbs->connect()->prepare('UPDATE about_us_info SET about_us_main_title =?,about_us_title=?,about_us_text=?,image_file_name=?,image_file_path=? WHERE about_us_info_id =?;');
-        if($aboutUsSQL->execute(array($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$aboutUsId))){
+    public function edit($aboutUsId,$aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$editedBy){
+        $aboutUsSQL= $this->dbs->connect()->prepare('UPDATE about_us_info SET about_us_main_title =?,about_us_title=?,about_us_text=?,image_file_name=?,image_file_path=?,edited_by=? WHERE about_us_info_id =?;');
+        if($aboutUsSQL->execute(array($aboutUsMainTitle,$aboutUsTitle,$aboutUsText,$imageFileName,$imageFilePath,$editedBy,$aboutUsId))){
             echo "<h1>Edited successfully</h1>";
         }
     }

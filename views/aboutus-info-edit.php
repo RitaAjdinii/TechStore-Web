@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once('../controllers/aboutus-contr.php');
     
 
@@ -29,7 +29,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $aboutMainTitle=$_POST['main-title'];
     $aboutTitle=$_POST['info-title'];
     $aboutInfoText=$_POST['about-info'];
-    $about->edit($aboutId,$aboutMainTitle,$aboutTitle,$aboutInfoText,$ImgFileName,$ImgFilePath);
+    $editedBy = $_SESSION['username'];
+    $about->edit($aboutId,$aboutMainTitle,$aboutTitle,$aboutInfoText,$ImgFileName,$ImgFilePath,$editedBy);
 }
 
 ?>

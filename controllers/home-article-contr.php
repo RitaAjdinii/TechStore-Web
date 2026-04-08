@@ -37,12 +37,13 @@ class HomeArticleContr{
 
     }
 
-    public function create($articleTitle,$articleParagraph,$isSlider){
-         $sql = $this->dbs->connect()->prepare('INSERT INTO home_page_article(home_article_title,home_article_paragraph,home_is_slider,home_article_image_name,home_article_image_path) VALUES(?,?,?,?,?)');
+    public function create($articleTitle,$articleParagraph,$isSlider,$createdBy){
+         $sql = $this->dbs->connect()->prepare('INSERT INTO home_page_article(home_article_title,home_article_paragraph,home_is_slider,home_article_image_name,home_article_image_path,created_by) VALUES(?,?,?,?,?,?)');
          $targetDirectory = "../Images/";
-         $imageFileName = basename($_FILES["image"]["name"]);
+         $imageFileName = basename($_FILES["photo"]["name"]);
          $imageFilePath = $targetDirectory.$imageFileName;
-         if($sql->execute(array($articleTitle,$articleParagraph,$isSlider,$imageFileName,$imageFilePath))){
+
+         if($sql->execute(array($articleTitle,$articleParagraph,$isSlider,$imageFileName,$imageFilePath,$createdBy))){
                 move_uploaded_file($_FILES['image']['tmp_name'],$imageFilePath);
                 header("location:../views/aboutus-add-info.php/?error=none");
          }
@@ -56,9 +57,9 @@ class HomeArticleContr{
         }
     }
 
-    public function edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId){
-        $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET home_article_image_name=?,home_article_image_path=?,home_article_title =?,home_article_paragraph=? WHERE home_article_id=?;');
-        if($sql->execute(array($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$homeArticleId))){
+    public function edit($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$editedBy,$homeArticleId){
+        $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET home_article_image_name=?,home_article_image_path=?,home_article_title =?,home_article_paragraph=?,edited_by=? WHERE home_article_id=?;');
+        if($sql->execute(array($imageFileName,$imageFilePath,$articleTitle,$articleParagraph,$editedBy,$homeArticleId))){
              echo "<h1>Edited successfully</h1>";
         }
     }

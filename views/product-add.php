@@ -11,8 +11,6 @@ session_start();
 </head>
 <body>
     <?php
-
-  
         if(isset($_POST["submit"])){
             $name = $_POST['product-name'];
             $description= $_POST['product-description'];
