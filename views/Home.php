@@ -29,7 +29,7 @@
 
             require_once('../controllers/home-article-contr.php');
             $home = new HomeArticleContr();
-            $articlesArray = $home->getArticles();
+            $articlesArray = $home->getDelete(0);
             foreach($articlesArray as $article){
                         echo "<article class='home-article'>";
                         echo  "<div class='home-article-content'>";
@@ -41,7 +41,7 @@
                         echo "</article>";
             } 
 
-            $slider = $home->getSliders();
+            $slider = $home->getDelete(1);
         ?>
 
 

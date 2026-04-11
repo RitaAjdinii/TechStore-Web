@@ -64,10 +64,32 @@ class HomeArticleContr{
         }
     }
 
-    public function delete($id){
-        $sql = $this->dbs->connect()->prepare('DELETE FROM home_page_article WHERE home_article_id=?; ');
+
+    public function forceDelete($id){
+         $sql = $this->dbs->connect()->prepare('DELETE FROM home_page_article WHERE home_article_id=?; ');
         if($sql->execute(array($id))){
              echo "<h1>Deleted successfully</h1>";
+        }
+    }
+    public function delete($id){
+        $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET deleted_at =NOW() WHERE home_article_id=?;');
+        if($sql->execute(array($id))){
+            echo "<h1>The item has been deleted from the page</h1>";
+        }
+    }
+
+    public function getDelete($home_is_slider){
+        $sql = $this->dbs->connect()->prepare('SELECT * FROM home_page_article WHERE deleted_at IS NULL AND home_is_slider=?;');
+        if($sql->execute(array($home_is_slider))){
+            return $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+    }
+
+
+    public function getForceDelete(){
+        $sql = $this->dbs->connect()->prepare('SELECT* FROM home_page_article;');
+        if($sql->execute()){
+            return $sql->fetchAll(PDO::FETCH_ASSOC);
         }
     }
 
