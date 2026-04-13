@@ -53,12 +53,20 @@
             exit();
         }
 
-        public function delete($id){
-            $sql = $this->dbs->connect()->prepare('DELETE FROM product WHERE product_id=?');
-            if($sql->execute(array($id))){
-                echo "<h1>Item deleted!</h1>";
-                exit();
-            }
-
+        public function delete($deletedBy,$id){
+        $sql = $this->dbs->connect()->prepare('UPDATE product SET deleted_at = NOW(),deleted_by=? WHERE product_id=?;');
+        if($sql->execute(array($deletedBy,$id))){
+            echo "<h1>The item has been deleted from the page</h1>";
         }
+        }
+
+        public function getDelete(){
+            $sql = $this->dbs->connect()->prepare('SELECT * FROM product WHERE deleted_at IS NULL;');
+            if($sql->execute()){
+                return $sql->fetchAll(PDO::FETCH_ASSOC);
+            }
+        } 
+
+
+
     }

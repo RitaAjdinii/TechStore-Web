@@ -25,6 +25,8 @@
                 <th>Created By:</th>
                 <th>Edited At:</th>
                 <th>Edited By:</th>
+                <th>Deleted At:</th>
+                <th>Deleted By:</th>
             </tr>
         </thead>
     <tbody>
@@ -48,6 +50,8 @@
                      echo "<td class='product'>{$about['created_by']}</td>";
                      echo "<td class='product'>{$about['edited_at']}</td>";
                      echo "<td class='product'>{$about['edited_by']}</td>";
+                      echo "<td class='product'>{$about['deleted_at']}</td>";
+                     echo "<td class='product'>{$about['deleted_by']}</td>";
                     echo "<td class='btn-controls' id='edit-btn'>
                             <a href='aboutus-info-edit.php?id=$about[about_us_info_id]'>Edit</a>
                           </td>";

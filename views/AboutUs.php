@@ -13,7 +13,7 @@
 
            $about = new AboutUsContr();
            $infoArticle = $about->getInfoArticle();
-           $articles = $about->getArticles();
+           $articles = $about->getDelete(0);
         
 
      ?>

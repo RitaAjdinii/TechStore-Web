@@ -71,9 +71,9 @@ class HomeArticleContr{
              echo "<h1>Deleted successfully</h1>";
         }
     }
-    public function delete($id){
-        $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET deleted_at =NOW() WHERE home_article_id=?;');
-        if($sql->execute(array($id))){
+    public function delete($deletedBy,$id){
+        $sql = $this->dbs->connect()->prepare('UPDATE home_page_article SET deleted_at = NOW(),deleted_by=? WHERE home_article_id=?;');
+        if($sql->execute(array($deletedBy,$id))){
             echo "<h1>The item has been deleted from the page</h1>";
         }
     }

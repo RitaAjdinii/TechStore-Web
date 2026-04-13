@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recent Activity</title>
+    <title>Products</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body class="products-body">
@@ -16,7 +16,7 @@
         require_once "../controllers/product-contr.php";
 
         $products = new ProductContr();
-        $productsArray = $products->getAll();
+        $productsArray = $products->getDelete();
             foreach ($productsArray as $product) {
                
                     echo "<article class='card'>";
