@@ -51,7 +51,13 @@
                             <a href='product-edit.php?id=$product[product_id]'>Edit</a>
                           </td>";
                     echo "<td class='btn-controls'  id='delete-btn'> 
-                             <a href='product-delete.php?id=$product[product_id]' >Delete</a> 
+                             <a href='product-remove.php?id=$product[product_id]' >Remove</a> 
+                          </td>";
+                            echo "<td class='btn-controls'  id='remove-btn'> 
+                                    <a href='product-delete.php?id=$product[product_id]' >Delete</a> 
+                                </td>";
+                                 echo "<td class='btn-controls'  id='restore-btn'> 
+                             <a href='product-restore.php?id=$product[product_id]' >Restore</a> 
                           </td>";
                     echo "</tr>";
         }

@@ -57,6 +57,12 @@
                     echo "<td class='btn-controls'  id='delete-btn'> 
                              <a href='home-article-delete.php?id=$article[home_article_id]'>Delete</a> 
                           </td>";
+                    echo "<td class='btn-controls'  id='remove-btn'> 
+                             <a href='home-article-remove.php?id=$article[home_article_id]'>Remove</a> 
+                          </td>";
+                          echo "<td class='btn-controls'  id='restore-btn'> 
+                             <a href='home-article-restore.php?id=$article[home_article_id]'>Restore</a> 
+                          </td>";
                     echo "</tr>";
         }       
         ?>

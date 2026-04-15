@@ -6,6 +6,6 @@ $about= new AboutUsContr();
 
 if(isset($_GET["id"])){
     $id=$_GET["id"];
-    $about->forceDelete($id);
+    $about->restore($id);
 }
 

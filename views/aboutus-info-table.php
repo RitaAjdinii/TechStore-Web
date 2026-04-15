@@ -55,8 +55,14 @@
                     echo "<td class='btn-controls' id='edit-btn'>
                             <a href='aboutus-info-edit.php?id=$about[about_us_info_id]'>Edit</a>
                           </td>";
-                    echo "<td class='btn-controls'  id='delete-btn'> 
+                            echo "<td class='btn-controls'  id='delete-btn'> 
                              <a href='aboutus-info-delete.php?id=$about[about_us_info_id]'>Delete</a> 
+                          </td>";
+                    echo "<td class='btn-controls'  id='remove-btn'> 
+                             <a href='aboutus-info-remove.php?id=$about[about_us_info_id]'>Remove</a> 
+                          </td>";
+                          echo "<td class='btn-controls'  id='restore-btn'> 
+                             <a href='about-us-info-restore.php?id=$about[about_us_info_id]'>Restore</a> 
                           </td>";
                     echo "</tr>";
         }

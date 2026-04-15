@@ -113,7 +113,15 @@ tr {
 }
 
 #delete-btn:hover {
-  background-color: rgb(251, 67, 67);
+  background-color: rgb(251, 15, 15);
+}
+#remove-btn:hover {
+  background-color: rgb(255, 114, 114);
+}
+
+#restore-btn:hover {
+  background-color: grey;
+  color: white;
 }
 
 .crud-form-body {

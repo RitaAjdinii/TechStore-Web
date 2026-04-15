@@ -69,8 +69,15 @@
     public function delete($deletedBy,$id){
         $sql = $this->dbs->connect()->prepare('UPDATE about_us_info SET deleted_at = NOW(),deleted_by=? WHERE about_us_info_id=?;');
         if($sql->execute(array($deletedBy,$id))){
-            echo "<h1>The item has been deleted from the page</h1>";
+            echo "<h1>The item has been removed from the page</h1>";
     }
+    }
+
+    public function forceDelete($id){
+        $sql = $this->dbs->connect()->prepare('DELETE FROM about_us_info WHERE about_us_info_id=?;');
+        if($sql->execute(array($id))){
+             echo "<h1>Deleted successfully</h1>";
+        }
     }
 
     public function getDelete($isInfo){
@@ -79,6 +86,13 @@
             return $sql->fetchAll(PDO::FETCH_ASSOC);
         }
     } 
+
+    public function restore($id){
+        $sql = $this->dbs->connect()->prepare("UPDATE about_us_info SET deleted_at=NULL,deleted_by = NULL WHERE about_us_info_id=?;");
+        if($sql->execute(array($id))){
+            echo "Item has been restored in the page";
+        }
+    }
 
 
     

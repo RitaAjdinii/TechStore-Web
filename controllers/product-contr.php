@@ -56,7 +56,21 @@
         public function delete($deletedBy,$id){
         $sql = $this->dbs->connect()->prepare('UPDATE product SET deleted_at = NOW(),deleted_by=? WHERE product_id=?;');
         if($sql->execute(array($deletedBy,$id))){
-            echo "<h1>The item has been deleted from the page</h1>";
+            echo "<h1>The item has been removed from the page</h1>";
+        }
+        }
+
+        public function forceDelete($id){
+        $sql = $this->dbs->connect()->prepare('DELETE FROM product WHERE product_id=?;');
+        if($sql->execute(array($id))){
+             echo "<h1>Deleted successfully</h1>";
+                }
+             }
+
+        public function restore($id){
+            $sql = $this->dbs->connect()->prepare('UPDATE product SET deleted_at=NULL,deleted_by=NULL WHERE product_id=?;');
+            if($sql->execute(array($id))){
+            echo "<h1>The item has been removed from the page</h1>";
         }
         }
 
