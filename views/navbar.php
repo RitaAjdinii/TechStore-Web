@@ -2,18 +2,18 @@
 session_start()
 ?>
 <nav>
-                <ul class="nav-list">
+        <ul class="nav-list">
             <div class="hamburger-menu">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-                <li class="nav-item"><a href="logo" class="logo">TEKK</a></li>
+                <li class="nav-item"><a href="#" class="logo">TEKK</a></li>
                 <li class="nav-item"><a  href="Home.php">Home</a></li>
                 <li class="nav-item"><a href="Products.php">Products</a></li>
                 <li class="nav-item"><a href="ContactUs.php">Contact Us</a></li>
                 <li class="nav-item"><a href="AboutUs.php">About Us</a></li>
-                <li class="nav-item"><a href="/Cart"><img src="../Images/cart.svg" alt=""></a></li>
+                <li class="nav-item"><a href="Cart.php"><img src="../Images/cart.svg" alt=""></a></li>
                 <?php
 
                  if(isset($_SESSION['userAdmin']) && $_SESSION['userAdmin']==1){
@@ -32,7 +32,7 @@ session_start()
                             <li class="item-edited"><a href="Products.php">Products</a></li>
                             <li class="item-edited"><a href="ContactUs.php">Contact Us</a></li>
                             <li class="item-edited"><a href="AboutUs.php">About Us</a></li>
-                            <li class="item-edited"><a href="/Cart">Cart</a></li>
+                            <li class="item-edited"><a href="Cart.php">Cart</a></li>
                             <?php
 
                              if(isset($_SESSION['userAdmin']) && $_SESSION['userAdmin']==1){

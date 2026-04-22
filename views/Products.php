@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,17 +20,18 @@
         $products = new ProductContr();
         $productsArray = $products->getDelete();
             foreach ($productsArray as $product) {
-               
-                    echo "<article class='card'>";
-                    echo  "<div class='image-section img-styling' style=\"background-image:url('../Images/{$product['image_file_name']}')\"></div>";
-                    echo "<div class='content'>";
-                    echo "<h2 class='product-title'>{$product['product_name']}</h2>";
-                    echo " <h3 class='product-price'>{$product['product_price']}€</h3>";
-                    echo "<p class='product-description'>{$product['product_description']}</p>";
-                    echo " <a href='' class=''>Add to Cart</a>";
-                    echo "</div>";
-                    
-                    echo "</article>";
+                echo "<form method='post' action='../views/add-to-cart.php' enctype='multipart/form-data'>";
+                echo '<input type="hidden" name="product-id" value="' . $product['product_id'] . '">';
+                echo "<article class='card'>";
+                echo  "<div class='image-section img-styling' style=\"background-image:url('../Images/{$product['image_file_name']}')\" ></div>";
+                echo "<div class='content'>";
+                echo "<h2 class='product-title'}>{$product['product_name']}</h2>";
+                echo " <h3 class='product-price' >{$product['product_price']}€</h3>";
+                echo "<p class='product-description'>{$product['product_description']}</p>";
+                echo " <a href='' class=''><button type='submit'>Add to Cart</button></a>";
+                echo "</div>";
+                echo "</article>";
+                echo "</form>";
                 }
         ?>
 
