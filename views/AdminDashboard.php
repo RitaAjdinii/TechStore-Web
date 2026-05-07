@@ -1,46 +1,48 @@
 <?php
 
 session_start();
-if(isset($_SESSION['userAdmin'])&& $_SESSION['userAdmin']==1){
+if (isset($_SESSION['userAdmin']) && $_SESSION['userAdmin'] == 1) {
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin-Dashboard</title>
-    <link rel="stylesheet" href="../styles/AdminDashboard.css">
-</head>
-<body>
-   
-     <?php include "adminHeader.php";?>
-    <main class="main-container">
-        <h1>List of Users added</h1>
-        <table class="table">
-            <thead >
-                <tr>
-                    <th>ID:</th>
-                    <th>Username:</th>
-                    <th>Password:</th>
-                    <th>Email:</th>
-                    <th>Location:</th>
-                    <th>Birthdate:</th>
-                    <th>Is Admin:</th>
-                </tr>
-            </thead>
-            <tbody>
-            <?php
+    <!DOCTYPE html>
+    <html lang="en">
 
-            require_once("../controllers/user-contr.php");
-            $user = new UserContr();
-            $usersArray = $user->getAll();
-            
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin-Dashboard</title>
+        <link rel="stylesheet" href="../styles/AdminDashboard.css">
+    </head>
+
+    <body>
+
+        <?php include "adminHeader.php"; ?>
+        <main class="main-container">
+            <h1>List of Users added</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID:</th>
+                        <th>Username:</th>
+                        <th>Password:</th>
+                        <th>Email:</th>
+                        <th>Location:</th>
+                        <th>Birthdate:</th>
+                        <th>Is Admin:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+
+                    require_once("../controllers/user-contr.php");
+                    $user = new UserContr();
+                    $usersArray = $user->getAll();
+
 
                     foreach ($usersArray as $user) {
                         echo "<tr>";
-                        echo "<td class='user'>{$user['user_id']}</td>";
-                        echo "<td class='user'>{$user['user_name']}</td>";
+                        echo "<td class='user'><a href='purchases-table.php?id=$user[user_id]?' class='purchase-table-link'>{$user['user_id']}</a></td>";
+                        echo "<td class='user'><a href='purchases-table.php?id=$user[user_id]' class='purchase-table-link'>{$user['user_name']}</a></td>";
                         echo "<td class='user'>{$user['user_password']}</td>";
                         echo "<td class='user'>{$user['user_email']}</td>";
                         echo "<td class='user'>{$user['user_location']}</td>";
@@ -53,22 +55,22 @@ if(isset($_SESSION['userAdmin'])&& $_SESSION['userAdmin']==1){
                         <a href='delete-user.php?id=$user[user_id]' >Delete</a> 
                             </td>";
                         echo "</tr>";
+                        echo "</a>";
                     }
-                
-    
-                ?>
-                
-            </tbody>
-        </table>
-    </main>
+
+
+                    ?>
+
+                </tbody>
+            </table>
+        </main>
     </body>
+
     </html>
 
 
-    <?php
+<?php
 
-}else{
+} else {
     header('location:Login.php');
 }
-
-

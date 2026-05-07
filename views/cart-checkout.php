@@ -10,6 +10,7 @@ if (isset($_POST["submit"])) {
         $productId = explode("_", $key);
         if (isset($productId[1])) {
             $cart->cartCheckout($productId[1], $quantity);
+            $cart->clearUserCart($_SESSION["userid"]);
         }
     }
 }

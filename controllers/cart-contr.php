@@ -41,4 +41,59 @@ class CartContr
             }
         }
     }
+
+    public function clearUserCart($userId)
+    {
+        $sql = $this->dbs->connect()->prepare("DELETE FROM cart WHERE user_id = ?");
+        $sql->execute(array($userId));
+    }
+
+    public function getUsername($id)
+    {
+        $sql = $this->dbs->connect()->prepare('SELECT user_name FROM user WHERE user_id=?;');
+        if ($sql->execute(array($id))) {
+            $row = $sql->fetch(PDO::FETCH_ASSOC);
+            if ($row) {
+                return $row['user_name'];
+            }
+        }
+        return null;
+    }
+
+    public function getAllPurchases()
+    {
+        $sql = $this->dbs->connect()->prepare('SELECT * FROM purchases;');
+
+        if ($sql->execute()) {
+            return $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+        return [];
+    }
+
+    public function getUserPurchases($id)
+    {
+        $sql = $this->dbs->connect()->prepare("
+            SELECT 
+                p.purchase_id, 
+                p.quantity, 
+                p.purchase_price, 
+                p.product_id, 
+                p.user_id, 
+                p.paid_at,
+                u.user_email, 
+                u.user_location, 
+                u.user_birthdate,
+                prod.product_name
+            FROM purchases p
+            INNER JOIN user u ON p.user_id = u.user_id
+            INNER JOIN product prod ON p.product_id = prod.product_id
+            WHERE p.user_id = ?;
+        ");
+
+        if ($sql->execute(array($id))) {
+            return $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        return [];
+    }
 }
